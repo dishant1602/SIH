@@ -13,4 +13,18 @@
     <string name="malla">Malla Mahal</string>
     <string name="banasur">Banasur Fort</string>
     <string name="rajbhunga">Rajbhunga Fort</string>
+    <string name="pithoragarh">Pithoragarh Fort</string>
+    <string name="askot">Askot</string>
+    <string name="vivekananda">Vivekananda in Kumaon</string>
+    <string name="almora">Almora</string>
+    <string name="simtola">Simtola</string>
+    <string name="kasar">Kasar Devi</string>
+    <string name="mayawati">Mayawati</string>
+    <string name="lake">Lakes Of Kumaon</string>
+    <string name="naini">Naini Lake</string>
+    <string name="damyanti">Nal Damayanti Tal</string>
+    <string name="sat">Sat Tal</string>
+    <string name="bhim">Bhim Tal</string>
+    <string name="khurpa">Khurpa Tal</string>
+    <string name="naukuchiya">Naukuchiya Tal</string>
 </resources>
