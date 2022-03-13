@@ -7,24 +7,14 @@
     android:background="#460B4F80"
     tools:context=".HomePage">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:ignore="MissingConstraints">
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:layout_width="wrap_content"
-            android:layout_height="120dp"
-            android:foregroundGravity="top"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/discovery" />
-    </LinearLayout>
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -86,51 +76,47 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
                                 android:orientation="horizontal">
 
-                                <LinearLayout
+                                <TextView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:layout_marginLeft="8dp"
-                                    android:orientation="vertical">
-
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="Yamunotri"
-                                        android:textColor="#083359"
-                                        android:textSize="24sp"
-                                        android:textStyle="bold" />
-
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="Distance from current location"
-                                        android:textColor="#575252"
-                                        android:textSize="14sp" />
-                                </LinearLayout>
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:text="Yamunotri"
+                                    android:textColor="#083359"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
 
                                 <LinearLayout
                                     android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:layout_marginLeft="15dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
                                     android:orientation="vertical">
 
                                     <TextView
-                                        android:layout_width="match_parent"
+                                        android:id="@+id/yamdist"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="15"
+                                        android:layout_gravity="center_horizontal|center_vertical"
+                                        android:layout_weight="1"
+                                        android:text="..."
                                         android:textColor="#FF5722"
-                                        android:textSize="24sp"
+                                        android:textSize="16sp"
                                         android:textStyle="bold" />
 
                                     <TextView
-                                        android:layout_width="match_parent"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Kms"
-                                        android:textColor="#083359"
-                                        android:textStyle="bold" />
+                                        android:layout_gravity="center_horizontal|center_vertical"
+                                        android:layout_weight="1"
+                                        android:text="from you"
+                                        android:textColor="#083359" />
                                 </LinearLayout>
+
                             </LinearLayout>
                         </LinearLayout>
 
@@ -169,50 +155,129 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
                                 android:orientation="horizontal">
 
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:text="Gangotri"
+                                    android:textColor="#083359"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+
                                 <LinearLayout
                                     android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:layout_marginLeft="8dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
                                     android:orientation="vertical">
 
                                     <TextView
-                                        android:layout_width="match_parent"
+                                        android:id="@+id/gangdist"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Gangotri"
-                                        android:textColor="#083359"
-                                        android:textSize="24sp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="..."
+                                        android:textColor="#FF5722"
+                                        android:textSize="16sp"
                                         android:textStyle="bold" />
 
                                     <TextView
-                                        android:layout_width="match_parent"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Distance from current location"
-                                        android:textColor="#575252"
-                                        android:textSize="14sp" />
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="from you"
+                                        android:textColor="#083359" />
                                 </LinearLayout>
 
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/kedarnathcard"
+                        android:layout_width="262dp"
+                        android:layout_height="196dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginEnd="20dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="246dp"
+                                android:layout_height="127dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="8dp"
+                                app:cardCornerRadius="8dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_marginLeft="15dp"
-                                    android:orientation="vertical">
+                                    android:scaleType="fitXY"
+                                    app:srcCompat="@drawable/kedarnath" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
+                                    android:orientation="horizontal" >
 
                                     <TextView
-                                        android:layout_width="match_parent"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="15"
-                                        android:textColor="#FF5722"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_weight="1"
+                                        android:text="Kedarnath"
+                                        android:textColor="#083359"
                                         android:textSize="24sp"
                                         android:textStyle="bold" />
 
-                                    <TextView
-                                        android:layout_width="match_parent"
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Kms"
-                                        android:textColor="#083359"
-                                        android:textStyle="bold" />
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/kedardist"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_weight="1"
+                                            android:text="..."
+                                            android:textColor="#FF5722"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_weight="1"
+                                            android:text="from you"
+                                            android:textColor="#083359" />
+                                    </LinearLayout>
+
                                 </LinearLayout>
                             </LinearLayout>
                         </LinearLayout>
@@ -220,213 +285,83 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                            android:id="@+id/kedarnathcard"
-                            android:layout_width="262dp"
-                            android:layout_height="196dp"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginEnd="20dp"
-                            app:cardCornerRadius="16dp"
-                            app:cardElevation="10dp">
+                        android:id="@+id/badrinathcard"
+                        android:layout_width="262dp"
+                        android:layout_height="196dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginEnd="20dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="10dp">
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                                <androidx.cardview.widget.CardView
-                                    android:layout_width="246dp"
-                                    android:layout_height="127dp"
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_marginTop="8dp"
-                                    app:cardCornerRadius="8dp">
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="246dp"
+                                android:layout_height="127dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="8dp"
+                                app:cardCornerRadius="8dp">
 
-                                    <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:scaleType="fitXY"
-                                        app:srcCompat="@drawable/kedarnath" />
-
-                                </androidx.cardview.widget.CardView>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical">
-
-                                <androidx.cardview.widget.CardView
-                                    android:layout_width="246dp"
-                                    android:layout_height="127dp"
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_marginTop="8dp"
-                                    app:cardCornerRadius="8dp">
-
-                                    <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:scaleType="fitXY"
-                                        app:srcCompat="@drawable/yamunotri" />
-
-                                </androidx.cardview.widget.CardView>
-
-                                <LinearLayout
+                                <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:orientation="horizontal">
+                                    android:scaleType="fitXY"
+                                    app:srcCompat="@drawable/badrinath" />
 
-                                    <LinearLayout
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_marginLeft="8dp"
-                                        android:orientation="vertical">
-
-                                        <TextView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="Kedarnath"
-                                            android:textColor="#083359"
-                                            android:textSize="24sp"
-                                            android:textStyle="bold" />
-
-                                        <TextView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="Distance from current location"
-                                            android:textColor="#575252"
-                                            android:textSize="14sp" />
-                                    </LinearLayout>
-
-                                    <LinearLayout
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_marginLeft="15dp"
-                                        android:orientation="vertical">
-
-                                        <TextView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="15"
-                                            android:textColor="#FF5722"
-                                            android:textSize="24sp"
-                                            android:textStyle="bold" />
-
-                                        <TextView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="Kms"
-                                            android:textColor="#083359"
-                                            android:textStyle="bold" />
-                                    </LinearLayout>
-                                </LinearLayout>
-                            </LinearLayout>
-                            </LinearLayout>
-
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/badrinathcard"
-                            android:layout_width="262dp"
-                            android:layout_height="196dp"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginEnd="20dp"
-                            app:cardCornerRadius="16dp"
-                            app:cardElevation="10dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-
-                                <androidx.cardview.widget.CardView
-                                    android:layout_width="246dp"
-                                    android:layout_height="127dp"
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_marginTop="8dp"
-                                    app:cardCornerRadius="8dp">
-
-                                    <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:scaleType="fitXY"
-                                        app:srcCompat="@drawable/badrinath" />
-
-                                </androidx.cardview.widget.CardView>
+                            </androidx.cardview.widget.CardView>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:orientation="vertical">
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp">
 
-                                <androidx.cardview.widget.CardView
-                                    android:layout_width="246dp"
-                                    android:layout_height="127dp"
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_marginTop="8dp"
-                                    app:cardCornerRadius="8dp">
-
-                                    <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:scaleType="fitXY"
-                                        app:srcCompat="@drawable/yamunotri" />
-
-                                </androidx.cardview.widget.CardView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:text="Badrinath"
+                                    android:textColor="#083359"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
 
                                 <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:orientation="horizontal">
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
 
-                                    <LinearLayout
+                                    <TextView
+                                        android:id="@+id/badridist"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_marginLeft="8dp"
-                                        android:orientation="vertical">
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="..."
+                                        android:textColor="#FF5722"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
 
-                                        <TextView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="Badrinath"
-                                            android:textColor="#083359"
-                                            android:textSize="24sp"
-                                            android:textStyle="bold" />
-
-                                        <TextView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="Distance from current location"
-                                            android:textColor="#575252"
-                                            android:textSize="14sp" />
-                                    </LinearLayout>
-
-                                    <LinearLayout
+                                    <TextView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_marginLeft="15dp"
-                                        android:orientation="vertical">
-
-                                        <TextView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="15"
-                                            android:textColor="#FF5722"
-                                            android:textSize="24sp"
-                                            android:textStyle="bold" />
-
-                                        <TextView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="Kms"
-                                            android:textColor="#083359"
-                                            android:textStyle="bold" />
-                                    </LinearLayout>
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="from you"
+                                        android:textColor="#083359" />
                                 </LinearLayout>
                             </LinearLayout>
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
                 </LinearLayout>
             </HorizontalScrollView>
 
 
-            </LinearLayout>
-        </ScrollView>
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
