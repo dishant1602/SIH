@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class DataPage extends AppCompatActivity {
-    ImageView yam, bycar, byair, bytrain, suryakund, taptkund, divyashila;
+    ImageView yam, suryakund, taptkund, divyashila;
+    TextView bycar,byair,bytrain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,16 +19,17 @@ public class DataPage extends AppCompatActivity {
         yam=findViewById(R.id.yam);
         bycar=findViewById(R.id.bycar);
         byair=findViewById(R.id.byair);
-        bytrain=findViewById(R.id.bytrain);
+        bytrain=findViewById(R.id.byrail);
         suryakund=findViewById(R.id.suryakund);
         taptkund=findViewById(R.id.taptkund);
         divyashila=findViewById(R.id.divyashila);
+        String h = "fromyam";
 
         yam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent yam_int = new Intent(DataPage.this, data_details.class);
-                yam_int.putExtra("key","fromyam");
+                yam_int.putExtra("key",h);
                 startActivity(yam_int);
             }
         });

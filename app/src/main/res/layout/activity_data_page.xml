@@ -61,31 +61,46 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
-                    <ImageView
+                    <TextView
                         android:id="@+id/bycar"
                         android:layout_width="300dp"
                         android:layout_height="262dp"
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
+                        android:background="@drawable/bycar"
+                        android:gravity="center_horizontal|top"
                         android:scaleType="fitXY"
-                        app:srcCompat="@drawable/bycar" />
+                        android:text="By Car"
+                        android:textSize="48sp"
+                        android:textStyle="bold|italic" />
 
-                    <ImageView
+                    <TextView
+                        android:id="@+id/byrail"
+                        android:layout_width="300dp"
+                        android:layout_height="262dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bytrain"
+                        android:gravity="center_horizontal|top"
+                        android:scaleType="fitXY"
+                        android:text="By Rail"
+                        android:textSize="48sp"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
                         android:id="@+id/byair"
                         android:layout_width="300dp"
                         android:layout_height="262dp"
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
+                        android:background="@drawable/byair"
+                        android:gravity="center_horizontal|top"
                         android:scaleType="fitXY"
-                        app:srcCompat="@drawable/byair" />
+                        android:text="By Air"
+                        android:textSize="48sp"
+                        android:textStyle="bold|italic" />
 
-                    <ImageView
-                        android:id="@+id/bytrain"
-                        android:layout_width="300dp"
-                        android:layout_height="262dp"
-                        android:layout_weight="1"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/bytrain" />
+
                 </LinearLayout>
             </HorizontalScrollView>
 
