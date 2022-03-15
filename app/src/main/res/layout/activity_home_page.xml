@@ -36,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
                 android:paddingBottom="5dp"
                 android:scrollbars="none">
 
@@ -239,7 +240,7 @@
                                     android:layout_height="match_parent"
                                     android:layout_marginLeft="8dp"
                                     android:layout_marginRight="8dp"
-                                    android:orientation="horizontal" >
+                                    android:orientation="horizontal">
 
                                     <TextView
                                         android:layout_width="wrap_content"
