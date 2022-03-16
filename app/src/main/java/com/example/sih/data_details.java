@@ -1,10 +1,16 @@
 package com.example.sih;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.ClickableSpan;
+import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -32,9 +38,14 @@ public class data_details extends AppCompatActivity {
             textView2.setText("Yamunotri is directly not connected with motorable roads and so trekking begins at Hanuman chatti which is 14 kms away from Yamunotri temple and Janki chatti which is 6 km trek to Yamunotri temple.\n\nHanuman chatti can be reached by ISBT buses from Haridwar, Rishikesh and Dehradun. Janki chatti can be reached by taking buses from Haridwar , Rishikesh, Dehradun, etc.  till Barkot and then taking taxi for Janki chatti which is 45 kms from Barkot.\n\nJanki chatti is the ultimate place for reaching Yamunotri by trekking.");
         }
         if(value.equals("frombytrain")){
-            relativeLayout.setBackgroundResource(R.drawable.bycar);
+            relativeLayout.setBackgroundResource(R.drawable.bytrain);
             textView.setText("By Rail details");
             textView2.setText("The nearest Railway stations to Yamunotri are Rishikesh, Dehradun and Haridwar. Rishikesh railway station is located at average 172 kms from Yamunotri, Rishikesh Railway station is situated at 200 kms from Yamunotri and Haridwar Railway station is located at a distance of 211 km from Yamunotri.\n\nThese Railway stations are very well connected with major cities of India  and trains to Rishikesh, Haridwar and Dehradun are frequent.\n\nFrom these stations, buses and taxis are available that will take tourist up-to Barkot  and Hanuman chatti  which are located at 51 kms and 14 kms away from Yamunotri temple respectively.");
+        }
+        if(value.equals("frombyair")){
+            relativeLayout.setBackgroundResource(R.drawable.bytrain);
+            textView.setText("By Air details");
+            textView2.setText("Dehradun can be reached via Jolly Grant Airport and then tourist can take helicopter from Dehradun to Kharsali.\n\nThe helicopter services are available in Shastradhara helipad Dehradun and then arrive at Kharsali with Helicopter for trekking 6 km to Yamunotri\n\nThe helicopter services offered at Sahastradhara has Rs 3,75,000 for 6 persons including tax and will take 30 minutes approximately from Sahastradhara to reach Kharsali. Himalayan Heli’s ground staff will welcome the tourists and provide them with Palki or Pony for Yamunotri trek.");
         }
     }
 }

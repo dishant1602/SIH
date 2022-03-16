@@ -9,8 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DataPage extends AppCompatActivity {
-    ImageView yam, suryakund, taptkund, divyashila;
-    TextView bycar,byair,bytrain;
+    ImageView yam;
+    TextView bycar,byair,bytrain, suryakund, taptkund, divyashila;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -125,31 +125,44 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent">
 
-                    <ImageView
+                    <TextView
                         android:id="@+id/suryakund"
                         android:layout_width="300dp"
                         android:layout_height="262dp"
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
+                        android:background="@drawable/suryakund"
+                        android:gravity="bottom|center_horizontal"
                         android:scaleType="fitXY"
-                        app:srcCompat="@drawable/suryakund" />
+                        android:text="Suryakund"
+                        android:textSize="48sp"
+                        android:textStyle="bold|italic" />
 
-                    <ImageView
+                    <TextView
                         android:id="@+id/taptkund"
                         android:layout_width="300dp"
                         android:layout_height="262dp"
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
+                        android:background="@drawable/taptkund"
+                        android:gravity="bottom|center_horizontal"
                         android:scaleType="fitXY"
-                        app:srcCompat="@drawable/taptkund" />
+                        android:text="Taptkund"
+                        android:textSize="48sp"
+                        android:textStyle="bold|italic" />
 
-                    <ImageView
+                    <TextView
                         android:id="@+id/divyashila"
                         android:layout_width="300dp"
                         android:layout_height="262dp"
+                        android:layout_marginRight="20dp"
                         android:layout_weight="1"
+                        android:background="@drawable/divyashila"
+                        android:gravity="bottom|center_horizontal"
                         android:scaleType="fitXY"
-                        app:srcCompat="@drawable/divyashila" />
+                        android:text="Divyashila"
+                        android:textSize="48sp"
+                        android:textStyle="bold|italic" />
                 </LinearLayout>
             </HorizontalScrollView>
 
