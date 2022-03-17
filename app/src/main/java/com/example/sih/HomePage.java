@@ -5,6 +5,7 @@ import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -18,6 +19,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,7 +38,7 @@ public class HomePage extends AppCompatActivity implements LocationListener {
     LocationManager locationManager;
     final static String[] PERMISSIONS = {Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION};
     final static int PERMISSIONS_ALL =1;
-    TextView yamdist, gangdist, kedardist, badridist;
+    TextView yamdist, gangdist, kedardist, badridist, hcdist, ntdist, gaurikunddist, gaumukhdist, fridist, rnpdist, hkpdist, teramanzildist, manasadist, tapkeshwardist;
     CardView yamunotricard;
     LocationListener locationListener;
     final long MIN_TIME = 5000;
@@ -44,6 +46,7 @@ public class HomePage extends AppCompatActivity implements LocationListener {
     final float MIN_DISTANCE = 1000;
     Double Latitude, Longitude;
     final int REQUEST_CODE = 101;
+    Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +58,22 @@ public class HomePage extends AppCompatActivity implements LocationListener {
         kedardist = findViewById(R.id.kedardist);
         badridist = findViewById(R.id.badridist);
         yamunotricard=findViewById(R.id.yamunotricard);
+        fridist = findViewById(R.id.fridist);
+        rnpdist = findViewById(R.id.rnpdist);
+        hcdist=findViewById(R.id.hcdist);
+        ntdist=findViewById(R.id.ntdist);
+        hkpdist = findViewById(R.id.hkpdist);
+        manasadist = findViewById(R.id.manasadist);
+        teramanzildist=findViewById(R.id.teramanzildist);
+        tapkeshwardist=findViewById(R.id.tapkeshwardist);
+        gaurikunddist=findViewById(R.id.gaurikunddist);
+        gaumukhdist=findViewById(R.id.gaumukhdist);
+        dialog = new Dialog(HomePage.this);
+        dialog.setContentView(R.layout.pop_up_box);
+        dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.back_pop));
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.setCancelable(false);
+        dialog.getWindow().getAttributes().windowAnimations=R.style.animation;
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         if(Build.VERSION.SDK_INT>=23){
             requestPermissions(PERMISSIONS, PERMISSIONS_ALL);
@@ -67,6 +86,7 @@ public class HomePage extends AppCompatActivity implements LocationListener {
                 handler.postDelayed(this,1000);
             }
         },1000);
+        dialog.show();
         yamunotricard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,10 +100,11 @@ public class HomePage extends AppCompatActivity implements LocationListener {
     public void onLocationChanged(@NonNull Location location) {
         Latitude = location.getLatitude();
         Longitude = location.getLongitude();
+        dialog.dismiss();
         Log.d("mylog","Get Location"+location.getLatitude() + "," + location.getLongitude());
         Location currentLocation = new Location("locationA");
-        currentLocation.setLatitude(17.372102);
-        currentLocation.setLongitude(78.484196);
+        currentLocation.setLatitude(location.getLatitude());
+        currentLocation.setLongitude(location.getLongitude());
         Location yamunotri = new Location("locationB");
         yamunotri.setLatitude(31.01450);
         yamunotri.setLongitude(78.46044);
@@ -110,6 +131,60 @@ public class HomePage extends AppCompatActivity implements LocationListener {
         double dist4 = currentLocation.distanceTo(badrinath);
         String exact_badrinath = df.format((dist4/1000));
         badridist.setText(exact_badrinath+" KM");
+        Location hc = new Location("locationF");
+        hc.setLatitude(30.9324);
+        hc.setLongitude(78.3992);
+        double dist5 = currentLocation.distanceTo(hc);
+        String exact_hc = df.format((dist5/1000));
+        hcdist.setText(exact_hc+" KM");
+        Location nt = new Location("locationG");
+        nt.setLatitude(30.58925);
+        nt.setLongitude(78.13903);
+        double dist6 = currentLocation.distanceTo(nt);
+        String exact_nt = df.format((dist6/1000));
+        ntdist.setText(exact_nt+" KM");
+        Location gaurikund = new Location("locationH");
+        gaurikund.setLatitude(30.65601);
+        gaurikund.setLongitude(79.02821);
+        double dist7 = currentLocation.distanceTo(gaurikund);
+        String exact_gaurikund = df.format((dist7/1000));
+        gaurikunddist.setText(exact_gaurikund+" KM");
+        Location gaumukh = new Location("locationI");
+        gaumukh.setLatitude(30.75402);
+        gaumukh.setLongitude(78.44484);
+        double dist8 = currentLocation.distanceTo(gaumukh);
+        String exact_gaumukh = df.format((dist8/1000));
+        gaumukhdist.setText(exact_gaumukh+" KM");
+        Location rnp = new Location("locationJ");
+        rnp.setLatitude(29.9927);
+        rnp.setLongitude(78.2437);
+        double dist9 = currentLocation.distanceTo(rnp);
+        String exact_rnp = df.format((dist9/1000));
+        rnpdist.setText(exact_rnp+" KM");
+        Location fri = new Location("locationK");
+        fri.setLatitude(30.3438);
+        fri.setLongitude(77.9978);
+        double dist10 = currentLocation.distanceTo(fri);
+        String exact_fri = df.format((dist10/1000));
+        fridist.setText(exact_fri+" KM");
+        Location hkp = new Location("locationL");
+        hkp.setLatitude(29.9567);
+        hkp.setLongitude(78.1710);
+        double dist11 = currentLocation.distanceTo(hkp);
+        String exact_hkp = df.format((dist11/1000));
+        hkpdist.setText(exact_hkp+" KM");
+        Location teramanzil = new Location("locationM");
+        teramanzil.setLatitude(30.12659);
+        teramanzil.setLongitude(78.33076);
+        double dist12 = currentLocation.distanceTo(teramanzil);
+        String exact_teramanzil = df.format((dist12/1000));
+        teramanzildist.setText(exact_teramanzil+" KM");
+        Location manasa = new Location("locationN");
+        manasa.setLatitude(30.12659);
+        manasa.setLongitude(78.33076);
+        double dist13 = currentLocation.distanceTo(manasa);
+        String exact_manasa = df.format((dist13/1000));
+        manasadist.setText(exact_manasa+" KM");
         locationManager.removeUpdates(this);
     }
 
