@@ -38,7 +38,7 @@ public class HomePage extends AppCompatActivity implements LocationListener {
     LocationManager locationManager;
     final static String[] PERMISSIONS = {Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION};
     final static int PERMISSIONS_ALL =1;
-    TextView yamdist, gangdist, kedardist, badridist, hcdist, ntdist, gaurikunddist, gaumukhdist, fridist, rnpdist, hkpdist, teramanzildist, manasadist, tapkeshwardist;
+    TextView yamdist, gangdist, kedardist, badridist, hcdist, ntdist, gaurikunddist, gaumukhdist, fridist, rnpdist, hkpdist, teramanzildist, manasadist, tapkeshwardist, vyasdist, sddist, robberdist, skiingdist, gnqdist, gehdist, ltdist;
     CardView yamunotricard;
     LocationListener locationListener;
     final long MIN_TIME = 5000;
@@ -47,6 +47,7 @@ public class HomePage extends AppCompatActivity implements LocationListener {
     Double Latitude, Longitude;
     final int REQUEST_CODE = 101;
     Dialog dialog;
+    String exact_yamunotri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,10 +59,17 @@ public class HomePage extends AppCompatActivity implements LocationListener {
         kedardist = findViewById(R.id.kedardist);
         badridist = findViewById(R.id.badridist);
         yamunotricard=findViewById(R.id.yamunotricard);
+        vyasdist=findViewById(R.id.vyasdist);
+        sddist=findViewById(R.id.sddist);
+        robberdist=findViewById(R.id.robberdist);
+        skiingdist=findViewById(R.id.skiingdist);
         fridist = findViewById(R.id.fridist);
         rnpdist = findViewById(R.id.rnpdist);
         hcdist=findViewById(R.id.hcdist);
         ntdist=findViewById(R.id.ntdist);
+        ltdist=findViewById(R.id.ltdist);
+        gehdist=findViewById(R.id.gehdist);
+        gnqdist=findViewById(R.id.gqndist);
         hkpdist = findViewById(R.id.hkpdist);
         manasadist = findViewById(R.id.manasadist);
         teramanzildist=findViewById(R.id.teramanzildist);
@@ -105,86 +113,27 @@ public class HomePage extends AppCompatActivity implements LocationListener {
         Location currentLocation = new Location("locationA");
         currentLocation.setLatitude(location.getLatitude());
         currentLocation.setLongitude(location.getLongitude());
-        Location yamunotri = new Location("locationB");
-        yamunotri.setLatitude(31.01450);
-        yamunotri.setLongitude(78.46044);
-        double dist1 = currentLocation.distanceTo(yamunotri);
-        DecimalFormat df = new DecimalFormat();
-        df.setMaximumFractionDigits(2);
-        String exact_yamunotri = df.format((dist1/1000));
-        yamdist.setText(exact_yamunotri+" KM");
-        Location gangotri = new Location("locationC");
-        gangotri.setLatitude(31.00081);
-        gangotri.setLongitude(78.92944);
-        double dist2 = currentLocation.distanceTo(gangotri);
-        String exact_gangotri = df.format((dist2/1000));
-        gangdist.setText(exact_gangotri+" KM");
-        Location kedarnath = new Location("locationD");
-        kedarnath.setLatitude(30.76117);
-        kedarnath.setLongitude(79.07015);
-        double dist3 = currentLocation.distanceTo(kedarnath);
-        String exact_kedarnath = df.format((dist3/1000));
-        kedardist.setText(exact_kedarnath+" KM");
-        Location badrinath = new Location("locationE");
-        badrinath.setLatitude(30.7433);
-        badrinath.setLongitude(79.4938);
-        double dist4 = currentLocation.distanceTo(badrinath);
-        String exact_badrinath = df.format((dist4/1000));
-        badridist.setText(exact_badrinath+" KM");
-        Location hc = new Location("locationF");
-        hc.setLatitude(30.9324);
-        hc.setLongitude(78.3992);
-        double dist5 = currentLocation.distanceTo(hc);
-        String exact_hc = df.format((dist5/1000));
-        hcdist.setText(exact_hc+" KM");
-        Location nt = new Location("locationG");
-        nt.setLatitude(30.58925);
-        nt.setLongitude(78.13903);
-        double dist6 = currentLocation.distanceTo(nt);
-        String exact_nt = df.format((dist6/1000));
-        ntdist.setText(exact_nt+" KM");
-        Location gaurikund = new Location("locationH");
-        gaurikund.setLatitude(30.65601);
-        gaurikund.setLongitude(79.02821);
-        double dist7 = currentLocation.distanceTo(gaurikund);
-        String exact_gaurikund = df.format((dist7/1000));
-        gaurikunddist.setText(exact_gaurikund+" KM");
-        Location gaumukh = new Location("locationI");
-        gaumukh.setLatitude(30.75402);
-        gaumukh.setLongitude(78.44484);
-        double dist8 = currentLocation.distanceTo(gaumukh);
-        String exact_gaumukh = df.format((dist8/1000));
-        gaumukhdist.setText(exact_gaumukh+" KM");
-        Location rnp = new Location("locationJ");
-        rnp.setLatitude(29.9927);
-        rnp.setLongitude(78.2437);
-        double dist9 = currentLocation.distanceTo(rnp);
-        String exact_rnp = df.format((dist9/1000));
-        rnpdist.setText(exact_rnp+" KM");
-        Location fri = new Location("locationK");
-        fri.setLatitude(30.3438);
-        fri.setLongitude(77.9978);
-        double dist10 = currentLocation.distanceTo(fri);
-        String exact_fri = df.format((dist10/1000));
-        fridist.setText(exact_fri+" KM");
-        Location hkp = new Location("locationL");
-        hkp.setLatitude(29.9567);
-        hkp.setLongitude(78.1710);
-        double dist11 = currentLocation.distanceTo(hkp);
-        String exact_hkp = df.format((dist11/1000));
-        hkpdist.setText(exact_hkp+" KM");
-        Location teramanzil = new Location("locationM");
-        teramanzil.setLatitude(30.12659);
-        teramanzil.setLongitude(78.33076);
-        double dist12 = currentLocation.distanceTo(teramanzil);
-        String exact_teramanzil = df.format((dist12/1000));
-        teramanzildist.setText(exact_teramanzil+" KM");
-        Location manasa = new Location("locationN");
-        manasa.setLatitude(30.12659);
-        manasa.setLongitude(78.33076);
-        double dist13 = currentLocation.distanceTo(manasa);
-        String exact_manasa = df.format((dist13/1000));
-        manasadist.setText(exact_manasa+" KM");
+        yamdist.setText(distcalc(currentLocation, 31.01450, 78.46044)+" KM");
+        gangdist.setText(distcalc(currentLocation, 31.00081, 78.92944)+" KM");
+        kedardist.setText(distcalc(currentLocation, 30.76117, 79.07015)+" KM");
+        badridist.setText(distcalc(currentLocation, 30.7433, 79.4938)+" KM");
+        hcdist.setText(distcalc(currentLocation, 30.9324, 78.3992)+" KM");
+        ntdist.setText(distcalc(currentLocation, 30.58925, 78.13903)+" KM");
+        gaurikunddist.setText(distcalc(currentLocation, 30.65601, 79.02821)+" KM");
+        gaumukhdist.setText(distcalc(currentLocation, 30.75402, 78.44484)+" KM");
+        rnpdist.setText(distcalc(currentLocation, 29.9927, 78.2437)+" KM");
+        fridist.setText(distcalc(currentLocation, 30.3438, 77.9978)+" KM");
+        hkpdist.setText(distcalc(currentLocation, 29.9567, 78.1710)+" KM");
+        teramanzildist.setText(distcalc(currentLocation, 30.12659, 78.33076)+" KM");
+        manasadist.setText(distcalc(currentLocation, 29.9579, 78.1653)+" KM");
+        tapkeshwardist.setText(distcalc(currentLocation, 30.35748, 78.01666)+" KM");
+        vyasdist.setText(distcalc(currentLocation, 30.7743, 79.4949)+" KM");
+        sddist.setText(distcalc(currentLocation, 30.3884, 78.1294)+" KM");
+        robberdist.setText(distcalc(currentLocation, 30.3766, 78.0612)+" KM");
+        skiingdist.setText(distcalc(currentLocation, 30.5305, 79.5685)+" KM");
+        gehdist.setText(distcalc(currentLocation, 30.4591, 78.0229)+" KM");
+        gnqdist.setText(distcalc(currentLocation, 30.08092, 78.34092)+" KM");
+        ltdist.setText(distcalc(currentLocation, 30.4667, 78.0950)+" KM");
         locationManager.removeUpdates(this);
     }
 
@@ -213,5 +162,16 @@ public class HomePage extends AppCompatActivity implements LocationListener {
                 locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,1000,1000,this);
             }
         }
+    }
+
+    private String distcalc(Location curr_func, Double lat_func, Double long_func){
+        Location test_func = new Location("locc");
+        test_func.setLatitude(lat_func);
+        test_func.setLongitude(long_func);
+        double dist14 = curr_func.distanceTo(test_func);
+        DecimalFormat df = new DecimalFormat();
+        df.setMaximumFractionDigits(2);
+        String out_func = df.format((dist14/1000));
+        return out_func;
     }
 }
