@@ -7,10 +7,13 @@
     android:background="#460B4F80"
     tools:context=".DataPage">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,154 +22,266 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="Yamunotri Temple"
-                android:textColor="#0B4980"
-                android:textSize="34sp"
-                android:textStyle="bold" />
+            android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/yam"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
-                android:scaleType="fitXY"
-                app:srcCompat="@drawable/yam" />
+                android:id="@+id/imageView7"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:text="How To Reach"
-                android:textColor="#0B4980"
-                android:textSize="34sp"
-                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="249dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@android:drawable/bottom_bar" />
 
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/bycar"
-                        android:layout_width="300dp"
-                        android:layout_height="262dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/bycar"
-                        android:gravity="center_horizontal|top"
-                        android:scaleType="fitXY"
-                        android:text="By Car"
-                        android:textSize="48sp"
-                        android:textStyle="bold|italic" />
-
-                    <TextView
-                        android:id="@+id/byrail"
-                        android:layout_width="300dp"
-                        android:layout_height="262dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/bytrain"
-                        android:gravity="center_horizontal|top"
-                        android:scaleType="fitXY"
-                        android:text="By Rail"
-                        android:textSize="48sp"
-                        android:textStyle="bold|italic" />
-
-                    <TextView
-                        android:id="@+id/byair"
-                        android:layout_width="300dp"
-                        android:layout_height="262dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/byair"
-                        android:gravity="center_horizontal|top"
-                        android:scaleType="fitXY"
-                        android:text="By Air"
-                        android:textSize="48sp"
-                        android:textStyle="bold|italic" />
-
-
-                </LinearLayout>
-            </HorizontalScrollView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:text="Center of Attraction"
-                android:textColor="#0B4980"
-                android:textSize="34sp"
-                android:textStyle="bold" />
-
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/suryakund"
-                        android:layout_width="300dp"
-                        android:layout_height="262dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/suryakund"
-                        android:gravity="bottom|center_horizontal"
-                        android:scaleType="fitXY"
-                        android:text="Suryakund"
-                        android:textSize="48sp"
-                        android:textStyle="bold|italic" />
-
-                    <TextView
-                        android:id="@+id/taptkund"
-                        android:layout_width="300dp"
-                        android:layout_height="262dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/taptkund"
-                        android:gravity="bottom|center_horizontal"
-                        android:scaleType="fitXY"
-                        android:text="Taptkund"
-                        android:textSize="48sp"
-                        android:textStyle="bold|italic" />
-
-                    <TextView
-                        android:id="@+id/divyashila"
-                        android:layout_width="300dp"
-                        android:layout_height="262dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/divyashila"
-                        android:gravity="bottom|center_horizontal"
-                        android:scaleType="fitXY"
-                        android:text="Divyashila"
-                        android:textSize="48sp"
-                        android:textStyle="bold|italic" />
-                </LinearLayout>
-            </HorizontalScrollView>
-
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:scaleType="fitEnd"
+                app:srcCompat="@drawable/ic_baseline_menu_24" />
         </LinearLayout>
-    </ScrollView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yamunotri Temple"
+                    android:textColor="#0B4980"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/yam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/yam" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="How To Reach"
+                    android:textColor="#0B4980"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/bycar"
+                            android:layout_width="300dp"
+                            android:layout_height="262dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bycar"
+                            android:gravity="center_horizontal|top"
+                            android:scaleType="fitXY"
+                            android:text="By Car"
+                            android:textSize="48sp"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/byrail"
+                            android:layout_width="300dp"
+                            android:layout_height="262dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bytrain"
+                            android:gravity="center_horizontal|top"
+                            android:scaleType="fitXY"
+                            android:text="By Rail"
+                            android:textSize="48sp"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/byair"
+                            android:layout_width="300dp"
+                            android:layout_height="262dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/byair"
+                            android:gravity="center_horizontal|top"
+                            android:scaleType="fitXY"
+                            android:text="By Air"
+                            android:textSize="48sp"
+                            android:textStyle="bold|italic" />
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Center of Attraction"
+                    android:textColor="#0B4980"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/suryakund"
+                            android:layout_width="300dp"
+                            android:layout_height="262dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/suryakund"
+                            android:gravity="bottom|center_horizontal"
+                            android:scaleType="fitXY"
+                            android:text="Suryakund"
+                            android:textSize="48sp"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/taptkund"
+                            android:layout_width="300dp"
+                            android:layout_height="262dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/taptkund"
+                            android:gravity="bottom|center_horizontal"
+                            android:scaleType="fitXY"
+                            android:text="Taptkund"
+                            android:textSize="48sp"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/divyashila"
+                            android:layout_width="300dp"
+                            android:layout_height="262dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/divyashila"
+                            android:gravity="bottom|center_horizontal"
+                            android:scaleType="fitXY"
+                            android:text="Divyashila"
+                            android:textSize="48sp"
+                            android:textStyle="bold|italic" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="When To Visit"
+                    android:textColor="#0B4980"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/time"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/time_yam" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Nearby Destinations"
+                    android:textColor="#0B4980"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/kharsali"
+                            android:layout_width="300dp"
+                            android:layout_height="262dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/kharsali"
+                            android:gravity="bottom|center_horizontal"
+                            android:scaleType="fitXY"
+                            android:text="Kharsali"
+                            android:textSize="48sp"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/shanidevmandir"
+                            android:layout_width="300dp"
+                            android:layout_height="262dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shanidevmandir"
+                            android:gravity="bottom|center_horizontal"
+                            android:scaleType="fitXY"
+                            android:text="Shani Dev Mandir"
+                            android:textSize="34sp"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/hanumanchatti"
+                            android:layout_width="300dp"
+                            android:layout_height="262dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/hc"
+                            android:gravity="bottom|center_horizontal"
+                            android:scaleType="fitXY"
+                            android:text="Hanuman Chatti"
+                            android:textSize="34sp"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/jankichatti"
+                            android:layout_width="300dp"
+                            android:layout_height="262dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/jc"
+                            android:gravity="bottom|center_horizontal"
+                            android:scaleType="fitXY"
+                            android:text="Janki Chatti"
+                            android:textSize="34sp"
+                            android:textStyle="bold|italic" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

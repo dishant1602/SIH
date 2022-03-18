@@ -1,63 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/data_detailsback"
-    android:background="@drawable/byair"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#460B4F80"
     tools:context=".data_details">
 
-    <androidx.cardview.widget.CardView
+    <ImageView
+        android:id="@+id/imageView5"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="30dp"
-        app:cardBackgroundColor="#FFFFFF"
-        app:cardCornerRadius="50dp">
+        android:layout_height="281dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/yamunotri" />
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Yamunotri"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:text="About Yamunotri"
-                android:textColor="#083359"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="327dp"
+            android:layout_height="473dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="16dp">
 
-            <ScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="About"
+                    android:textColor="#083359"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="wrap_content"
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/trade_winds"
-                        android:text="..."
-                        android:textColor="#FF5722"
-                        android:textSize="16sp" />
-                </LinearLayout>
-            </ScrollView>
-        </LinearLayout>
+                        android:orientation="vertical">
 
-    </androidx.cardview.widget.CardView>
-</RelativeLayout>
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:fontFamily="@font/trade_winds"
+                            android:text="..."
+                            android:textColor="#FF5722"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_menu_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

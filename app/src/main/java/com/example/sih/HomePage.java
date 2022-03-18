@@ -6,11 +6,8 @@ import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.location.Address;
-import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -21,18 +18,9 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-
-import java.io.IOException;
 import java.text.DecimalFormat;
-import java.util.List;
-import java.util.Locale;
 
 public class HomePage extends AppCompatActivity implements LocationListener {
     LocationManager locationManager;
@@ -40,20 +28,22 @@ public class HomePage extends AppCompatActivity implements LocationListener {
     final static int PERMISSIONS_ALL =1;
     TextView yamdist, gangdist, kedardist, badridist, hcdist, ntdist, gaurikunddist, gaumukhdist, fridist, rnpdist, hkpdist, teramanzildist, manasadist, tapkeshwardist, vyasdist, sddist, robberdist, skiingdist, gnqdist, gehdist, ltdist;
     CardView yamunotricard;
-    LocationListener locationListener;
-    final long MIN_TIME = 5000;
-    String Location_Provider=LocationManager.GPS_PROVIDER;
-    final float MIN_DISTANCE = 1000;
+    CardView hccard, gaurikundcard, ntcard, gaumukhcard, rnpcard, fricard, hkpcard, tapkeshwarcard, manasacard, teramanzilcard, vyascard, robbercard, sdcard, skiingcard, gqncard, ltcard, gehcard;
     Double Latitude, Longitude;
-    final int REQUEST_CODE = 101;
     Dialog dialog;
-    String exact_yamunotri;
-
+    ImageView back_but;
+//By default section
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home_page);
+        hkpcard=findViewById(R.id.hkpcard);
+        tapkeshwarcard=findViewById(R.id.tapkeshwarcard);
+        manasacard=findViewById(R.id.manasacard);
+        teramanzilcard=findViewById(R.id.teramanzilcard);
+        rnpcard=findViewById(R.id.rnpcard);
+        fricard=findViewById(R.id.fricard);
         yamdist = findViewById(R.id.yamdist);
         gangdist = findViewById(R.id.gangdist);
         kedardist = findViewById(R.id.kedardist);
@@ -63,6 +53,7 @@ public class HomePage extends AppCompatActivity implements LocationListener {
         sddist=findViewById(R.id.sddist);
         robberdist=findViewById(R.id.robberdist);
         skiingdist=findViewById(R.id.skiingdist);
+        back_but=findViewById(R.id.imageView2);
         fridist = findViewById(R.id.fridist);
         rnpdist = findViewById(R.id.rnpdist);
         hcdist=findViewById(R.id.hcdist);
@@ -76,6 +67,10 @@ public class HomePage extends AppCompatActivity implements LocationListener {
         tapkeshwardist=findViewById(R.id.tapkeshwardist);
         gaurikunddist=findViewById(R.id.gaurikunddist);
         gaumukhdist=findViewById(R.id.gaumukhdist);
+        hccard=findViewById(R.id.hccard);
+        gaurikundcard=findViewById(R.id.gaurikundcard);
+        ntcard=findViewById(R.id.ntcard);
+        gaumukhcard=findViewById(R.id.gaumukhcard);
         dialog = new Dialog(HomePage.this);
         dialog.setContentView(R.layout.pop_up_box);
         dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.back_pop));
@@ -95,15 +90,81 @@ public class HomePage extends AppCompatActivity implements LocationListener {
             }
         },1000);
         dialog.show();
-        yamunotricard.setOnClickListener(new View.OnClickListener() {
+        yamunotricard.setOnClickListener(view -> {
+            Intent i = new Intent(HomePage.this,DataPage.class);
+            startActivity(i);
+        });
+        back_but.setOnClickListener(view -> {
+            moveTaskToBack(true);
+            android.os.Process.killProcess(android.os.Process.myPid());
+            System.exit(1);
+        });
+        hccard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(HomePage.this,DataPage.class);
-                startActivity(i);
+                Intent hccard_int = new Intent(HomePage.this,data_details.class);
+                hccard_int.putExtra("key","fromhccard");
+                startActivity(hccard_int);
+            }
+        });
+        gaurikundcard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent gaurikundcard_int = new Intent(HomePage.this,data_details.class);
+                gaurikundcard_int.putExtra("key","fromgaurikundcard");
+                startActivity(gaurikundcard_int);
+            }
+        });
+        ntcard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ntcard_int = new Intent(HomePage.this,data_details.class);
+                ntcard_int.putExtra("key","fromntcard");
+                startActivity(ntcard_int);
+            }
+        });
+        gaumukhcard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent gaumukhcard_int = new Intent(HomePage.this,data_details.class);
+                gaumukhcard_int.putExtra("key","fromgaumukhcard");
+                startActivity(gaumukhcard_int);
+            }
+        });
+        rnpcard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent rnpcard_int = new Intent(HomePage.this,data_details.class);
+                rnpcard_int.putExtra("key","fromrnpcard");
+                startActivity(rnpcard_int);
+            }
+        });
+        fricard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent fricard_int = new Intent(HomePage.this,data_details.class);
+                fricard_int.putExtra("key","fromfricard");
+                startActivity(fricard_int);
+            }
+        });
+        hkpcard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent hkpcard_int = new Intent(HomePage.this,data_details.class);
+                hkpcard_int.putExtra("key","fromhkpcard");
+                startActivity(hkpcard_int);
+            }
+        });
+        tapkeshwarcard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent tapkeshwarcard_int = new Intent(HomePage.this,data_details.class);
+                tapkeshwarcard_int.putExtra("key","fromtapkeshwarcard");
+                startActivity(tapkeshwarcard_int);
             }
         });
     }
-
+// For current location and to display it
     @Override
     public void onLocationChanged(@NonNull Location location) {
         Latitude = location.getLatitude();
@@ -136,7 +197,7 @@ public class HomePage extends AppCompatActivity implements LocationListener {
         ltdist.setText(distcalc(currentLocation, 30.4667, 78.0950)+" KM");
         locationManager.removeUpdates(this);
     }
-
+// Requesting permission to access location
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -152,7 +213,7 @@ public class HomePage extends AppCompatActivity implements LocationListener {
             requestLocation();
         }
     }
-
+// Get location on approval
     public void requestLocation(){
         if(locationManager==null){
             locationManager=(LocationManager) getSystemService(LOCATION_SERVICE);
@@ -163,7 +224,7 @@ public class HomePage extends AppCompatActivity implements LocationListener {
             }
         }
     }
-
+// User defined function for distance between current and set coordinates
     private String distcalc(Location curr_func, Double lat_func, Double long_func){
         Location test_func = new Location("locc");
         test_func.setLatitude(lat_func);
