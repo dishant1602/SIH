@@ -40,8 +40,15 @@ public class HomePage extends AppCompatActivity implements LocationListener {
         setContentView(R.layout.activity_home_page);
         hkpcard=findViewById(R.id.hkpcard);
         tapkeshwarcard=findViewById(R.id.tapkeshwarcard);
+        gqncard=findViewById(R.id.gqncard);
+        ltcard=findViewById(R.id.ltcard);
+        gehcard=findViewById(R.id.gehcard);
         manasacard=findViewById(R.id.manasacard);
         teramanzilcard=findViewById(R.id.teramanzilcard);
+        vyascard=findViewById(R.id.vyascard);
+        robbercard=findViewById(R.id.robbercard);
+        sdcard=findViewById(R.id.sdcard);
+        skiingcard=findViewById(R.id.skiingcard);
         rnpcard=findViewById(R.id.rnpcard);
         fricard=findViewById(R.id.fricard);
         yamdist = findViewById(R.id.yamdist);
@@ -99,68 +106,116 @@ public class HomePage extends AppCompatActivity implements LocationListener {
             android.os.Process.killProcess(android.os.Process.myPid());
             System.exit(1);
         });
-        hccard.setOnClickListener(new View.OnClickListener() {
+        hccard.setOnClickListener(view -> {
+            Intent hccard_int = new Intent(HomePage.this,data_details.class);
+            hccard_int.putExtra("key","fromhccard");
+            startActivity(hccard_int);
+        });
+        gaurikundcard.setOnClickListener(view -> {
+            Intent gaurikundcard_int = new Intent(HomePage.this,data_details.class);
+            gaurikundcard_int.putExtra("key","fromgaurikundcard");
+            startActivity(gaurikundcard_int);
+        });
+        ntcard.setOnClickListener(view -> {
+            Intent ntcard_int = new Intent(HomePage.this,data_details.class);
+            ntcard_int.putExtra("key","fromntcard");
+            startActivity(ntcard_int);
+        });
+        gaumukhcard.setOnClickListener(view -> {
+            Intent gaumukhcard_int = new Intent(HomePage.this,data_details.class);
+            gaumukhcard_int.putExtra("key","fromgaumukhcard");
+            startActivity(gaumukhcard_int);
+        });
+        rnpcard.setOnClickListener(view -> {
+            Intent rnpcard_int = new Intent(HomePage.this,data_details.class);
+            rnpcard_int.putExtra("key","fromrnpcard");
+            startActivity(rnpcard_int);
+        });
+        fricard.setOnClickListener(view -> {
+            Intent fricard_int = new Intent(HomePage.this,data_details.class);
+            fricard_int.putExtra("key","fromfricard");
+            startActivity(fricard_int);
+        });
+        hkpcard.setOnClickListener(view -> {
+            Intent hkpcard_int = new Intent(HomePage.this,data_details.class);
+            hkpcard_int.putExtra("key","fromhkpcard");
+            startActivity(hkpcard_int);
+        });
+        tapkeshwarcard.setOnClickListener(view -> {
+            Intent tapkeshwarcard_int = new Intent(HomePage.this,data_details.class);
+            tapkeshwarcard_int.putExtra("key","fromtapkeshwarcard");
+            startActivity(tapkeshwarcard_int);
+        });
+        manasacard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent hccard_int = new Intent(HomePage.this,data_details.class);
-                hccard_int.putExtra("key","fromhccard");
-                startActivity(hccard_int);
+                Intent manasacard_int = new Intent(HomePage.this,data_details.class);
+                manasacard_int.putExtra("key","frommanasacard");
+                startActivity(manasacard_int);
             }
         });
-        gaurikundcard.setOnClickListener(new View.OnClickListener() {
+        teramanzilcard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent gaurikundcard_int = new Intent(HomePage.this,data_details.class);
-                gaurikundcard_int.putExtra("key","fromgaurikundcard");
-                startActivity(gaurikundcard_int);
+                Intent teramanzilcard_int = new Intent(HomePage.this,data_details.class);
+                teramanzilcard_int.putExtra("key","fromteramanzilcard");
+                startActivity(teramanzilcard_int);
             }
         });
-        ntcard.setOnClickListener(new View.OnClickListener() {
+        vyascard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent ntcard_int = new Intent(HomePage.this,data_details.class);
-                ntcard_int.putExtra("key","fromntcard");
-                startActivity(ntcard_int);
+                Intent vyascard_int = new Intent(HomePage.this,data_details.class);
+                vyascard_int.putExtra("key","fromvyascard");
+                startActivity(vyascard_int);
             }
         });
-        gaumukhcard.setOnClickListener(new View.OnClickListener() {
+        robbercard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent gaumukhcard_int = new Intent(HomePage.this,data_details.class);
-                gaumukhcard_int.putExtra("key","fromgaumukhcard");
-                startActivity(gaumukhcard_int);
+                Intent robbercard_int = new Intent(HomePage.this,data_details.class);
+                robbercard_int.putExtra("key","fromrobbercard");
+                startActivity(robbercard_int);
             }
         });
-        rnpcard.setOnClickListener(new View.OnClickListener() {
+        sdcard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent rnpcard_int = new Intent(HomePage.this,data_details.class);
-                rnpcard_int.putExtra("key","fromrnpcard");
-                startActivity(rnpcard_int);
+                Intent sdcard_int = new Intent(HomePage.this,data_details.class);
+                sdcard_int.putExtra("key","fromsdcard");
+                startActivity(sdcard_int);
             }
         });
-        fricard.setOnClickListener(new View.OnClickListener() {
+        skiingcard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent fricard_int = new Intent(HomePage.this,data_details.class);
-                fricard_int.putExtra("key","fromfricard");
-                startActivity(fricard_int);
+                Intent skiingcard_int = new Intent(HomePage.this,data_details.class);
+                skiingcard_int.putExtra("key","fromskiingcard");
+                startActivity(skiingcard_int);
             }
         });
-        hkpcard.setOnClickListener(new View.OnClickListener() {
+        gqncard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent hkpcard_int = new Intent(HomePage.this,data_details.class);
-                hkpcard_int.putExtra("key","fromhkpcard");
-                startActivity(hkpcard_int);
+                Intent gqncard_int = new Intent(HomePage.this,data_details.class);
+                gqncard_int.putExtra("key","fromgqncard");
+                startActivity(gqncard_int);
             }
         });
-        tapkeshwarcard.setOnClickListener(new View.OnClickListener() {
+        ltcard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent tapkeshwarcard_int = new Intent(HomePage.this,data_details.class);
-                tapkeshwarcard_int.putExtra("key","fromtapkeshwarcard");
-                startActivity(tapkeshwarcard_int);
+                Intent ltcard_int = new Intent(HomePage.this,data_details.class);
+                ltcard_int.putExtra("key","fromltcard");
+                startActivity(ltcard_int);
+            }
+        });
+        gehcard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent gehcard_int = new Intent(HomePage.this,data_details.class);
+                gehcard_int.putExtra("key","fromgehcard");
+                startActivity(gehcard_int);
             }
         });
     }

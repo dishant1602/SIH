@@ -33,10 +33,17 @@ public class data_details extends AppCompatActivity {
         back_buto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if((value.equals("fromhccard")) || (value.equals("fromgaurikundcard")) || (value.equals("fromntcard")) || (value.equals("fromgaumukhcard")) || (value.equals("fromrnpcard")) || (value.equals("fromfricard")) || (value.equals("fromhkpcard")) || )
-                Intent intent1 = new Intent(data_details.this,DataPage.class);
-                startActivity(intent1);
-                finish();
+                if((value.equals("fromhccard")) || (value.equals("fromgaurikundcard")) || (value.equals("fromntcard")) || (value.equals("fromgaumukhcard")) || (value.equals("fromrnpcard")) || (value.equals("fromfricard")) || (value.equals("fromhkpcard")) || (value.equals("fromtapkeshwarcard")) || (value.equals("frommanasacard")) || (value.equals("fromteramanzilcard")) || (value.equals("fromvyascard")) || (value.equals("fromrobbercard")) || (value.equals("fromsdcard")) || (value.equals("fromskiingcard")) || (value.equals("fromgqncard")) || (value.equals("fromltcard")) || (value.equals("fromgehcard"))){
+                    Intent intent1 = new Intent(data_details.this,HomePage.class);
+                    startActivity(intent1);
+                    finish();
+                }
+                else{
+                    Intent intent2 = new Intent(data_details.this,DataPage.class);
+                    startActivity(intent2);
+                    finish();
+                }
+
             }
         });
         if(value.equals("fromyam")){
@@ -48,6 +55,7 @@ public class data_details extends AppCompatActivity {
         if(value.equals("fromhccard")){
             imageView5.setImageResource(R.drawable.hc);
             textView4.setText("Hanuman Chatti-Janki Chatti");
+            textView4.setTextSize(24);
             textView.setText("About");
             textView2.setText("Situated at a distance of 14 kms from Yamunotri it is a serene place and provides ample amount of accommodation facilities.\n\nIt is a frequently used by travelers as it is popular trekking spot in the region\n\nOne can purchase Medicines, Raincoats and other necessary items at Hanuman Chatti.\n\nOne can reach Hanuman Chatti from Barkot by traveling in Jeep and then trekking for Yamunotri begins from here.\n\nIt is considered as one of the best trekking Place for Trek Lovers.\n\nThere are two treks further possible from Hanuman chatti with less distance and one can further reach to Janki chatti from Hanuman chatti. Then, perform trek from Janki chatti to Yamunotri which is 6kms trek.");
         }
@@ -86,6 +94,68 @@ public class data_details extends AppCompatActivity {
             textView4.setText("Har ki Pauri");
             textView.setText("About");
             textView2.setText("Har ki pauri is a main attraction of Haridwar. Har ki pauri is dedicate to Goddess Ganga Maiya.Tourist touring Haridwar first visit Har ki Pauri and take bath in Maa Ganga.\n\nTaking a bath here is the most ardent desire of every devotee who comes to Haridwar because it is believed that bathing here leads to salvation.\n\nThis holy ghat was built by King Vikramaditya in the memory of his brother Bhartrihari. It is said that Bhartrihari had come to Haridwar to meditate on the banks of river Ganges and it was here that he took his last breath. After his death, King Vikramaditya built a ghat here which is today known as \"Har Ki Pauri\"\n\nHar Ki Pauri or Brahmakund is the main ghat of the holy city of Haridwar. It is believed that this is the place from where the river Ganges leaves the mountains and takes the direction of the plains. The river at this place has the power to wash away sins and here the footprints of Srihari in a stone support this point.\n\nEvery evening at sunset, the sage performs the Ganga Aarti, at which time the water flowing down the river is completely bathed in light and the priests engage in rituals. The Ganga Aarti is usually performed from 5:30 am to 6:30 am and from 6:00 pm to 7:00 pm in the evening. If you want to receive this aarti we advise you to reach at 4 pm to avoid the crowd.\n\nGanga Aarti\n\nMorning  -  5:30am to 6:30am\n\nEvening  -   6:00pm to 7:00pm\n\nHar ki pauri is just 2KM away from Haridwar Railway station.\n\nIn Har ki Pauri there is one  clock tower which is known as  Raja Birla Tower. here we see one bridge which known as a Lakshman jula.");
+        }
+        if(value.equals("fromtapkeshwarcard")){
+            imageView5.setImageResource(R.drawable.tapkeshwar);
+            textView4.setText("Tapkeshwar Temple");
+            textView.setText("About");
+            textView2.setText("Tapkeshwar temple architecture is a gentle amalgamation of man-made and natural design. This temple is situated between two hills. Here the main sanctum is contained inside a natural cave. The amazing view of this temple can be seen inside the cave. Shivling is installed inside this cave and the water droplets falling from the cave keep falling on the Shiva linga continuously. It is because of the continuous dripping of Shivling that this temple is named as Tapkeshwar Temple.\n\nThe best time to visit Tapkeshwar Temple is during Mahashivratri. This festival is celebrated as the marriage of Parvati to Lord Shiva. To celebrate this festival, a large-scale event is organized here which is attended by a large number of pilgrims. On this holy festival, pilgrims chant \"Har Har Mahadev\" and offer their favorite bhog to Lord Shiva. If you want to visit Tapkeshwar Temple then traveling during Shivratri can prove to be a memorable moment in your life.\n\nTapkeshwar Mahadev Temple remains open from 9 am to 1 pm and again from 1.30 am to 5.30 pm.\n\nNo entry fee is charged in Tapkeshwar temple.\n\nTourists can take pictures at Tapkeshwar Temple.\n\nThis temple is located near a beautiful forest. Where a river located enhances the beauty of this temple even more, during your visit to the temple, you should also take part in trekking here, which will increase the fun of your journey even more. If you feel hungry after trekking, you can enjoy street food at the stalls located nearby.\n\nA visit to the Tapkeshwar Temple can prove to be a very memorable experience in your life, as the natural beauty here will remind you of this place time and again.");
+        }
+        if(value.equals("frommanasacard")){
+            imageView5.setImageResource(R.drawable.manasa);
+            textView4.setText("Manasa Devi Temple");
+            textView.setText("About");
+            textView2.setText("Situated on the Shivalik hills, which is located at a distance of 3km from Haridwar,Manasa devi temple is  included in 52 shakti peethas.\n\nThere are two idols present in the temple of Manasa devi which reflect the power of Maa Mansa.\n\nOne of the idols has five arms and three faces,while the other idol has eight arms.\n\nMaa Mansa as the name suggests fulfills the wishes of her devotees who come from far-flung areas to fulfill their beliefs and tie the thread on the branches of the tree.\n\nWhen their wishes are fulfilled by the mother, people come back here and untie the thread.\n\nRopeway facilities are available for those who want to reach this place.");
+        }
+        if(value.equals("fromteramanzilcard")){
+            imageView5.setImageResource(R.drawable.teramanzil);
+            textView4.setText("Tera Manzil Mandir");
+            textView.setText("About");
+            textView2.setText("It is one of the most popular Hindu temples in Rishikesh. It is also known as Trimbakeshwar Temple. Adi Shankaracharya established this Hindu temple in the 9th century AD.\n\nThings to do in and around the temple:\n\nStairs will take you inside this multi-storey building. There are many shops inside the temple premises,\nprecious stone\njewelry\nhandicrafts\nand artifacts.\n\nGet a panoramic view of the sparkling river Ganga from the top floor of the building.\n\nAlso, don't forget to witness the enchanting sunset view from here which is beyond one's imagination.\n\nTiming – 6AM to 7PM");
+        }
+        if(value.equals("fromvyascard")){
+            imageView5.setImageResource(R.drawable.vyas);
+            textView4.setText("Vyas Gufa");
+            textView.setText("About");
+            textView2.setText("Situated at a distance of 5.5km from Badrinath bus stand in Mana village in Chamoli district of Uttarakhand lies the Vyas Caves which is believed to be the place where sage Vyas composed the Mahabharata epic with the help of Lord Ganesh.\n\nSage Ved Vyas also composed 18 puranas, Brahma sutras and four Vedas.\n\nMaharshi Vyas statue is installed in the cave and worshiped by the pilgrims.\n\nA distinct feature of this temple is the roof which resembles the pages from the collection of his holy scripts.\n\nThere is an interesting story related to the place that explains the broken tusk of Lord Ganesh.\n\nWhen Vyas was composing Mahabharata, he needed someone to write what he was dictating and so he asked Lord Ganesh for the same.\n\nLord Ganesh agreed but he had a condition- that Vyas should not stop even for a moment or else he would stop writing and leave.\n\nVyas started dictating as fast as he could and Ganesh bent down over the script pages and finally his reed pen broke.\n\nTo which, he broke off a part of his tusk which was then used as a pen thereon.\n\nThis cave is also the place where Ved Vyas used to Meditate.");
+        }
+        if(value.equals("fromrobbercard")){
+            imageView5.setImageResource(R.drawable.robber);
+            textView4.setText("Robbers Cave");
+            textView.setText("About");
+            textView2.setText("Robbers cave is also known as Gucchu pani. When the British used to rule, this cave was very scary at that time, which the dacoits used to hide. It is said that whenever the dacoits used to commit robbery and the British army followed them, they used to hide the stolen goods in this cave and hid here. There were many such mysterious paths in this cave, about which only thieves knew. This cave was so scary that even the British soldiers were afraid to come here.\n\nIn today's time this cave is very clean and is a very famous tourist place, tourists come here to visit and enjoy visiting this cave. The temperature inside this cave remains very low even in the summertime, due to which there is no feeling of heat inside the cave at all.\n\nIt is a natural cave through which the river flows. This cave is about 600 meters long. This place is a very beautiful place for photography. Robbers Cave is at a distance of about 8 kms from Dehradun city. Local buses are easily available from any corner of the city.\n\nThe water of the river falling like a waterfall on one corner of the cave and traveling inside the cave in that cold water is very exciting. A good arrangement of tea, water, and snacks has been made by the local people in the shops outside the cave. You can rent sleepers outside the cave itself so that your shoes don't get damaged by the water. This arrangement made by the local people impresses the tourists.\n\nEntry cost – 25/- per person.\n\nAvoid visiting during Monsoon.");
+        }
+        if(value.equals("fromsdcard")){
+            imageView5.setImageResource(R.drawable.sd);
+            textView4.setText("Sahastradhara");
+            textView.setText("About");
+            textView2.setText("Sahastradhara is 11-12 kms from Dehradun. It is a picnic spot but the main attraction here is the caves in which the water is constantly dripping. This water is rich in sulfur, using which skin pain can be cured. The water falling from the hill has been collected in a natural way. On walking a little further on the hill, there are many naturally carved small caves inside the hill, which are not clearly visible from outside, but when entering these caves, their roof drips like light rain showers. Several groups of streams located here are known as Sahastradhara. Every year hundreds of people come here to escape the heat in summer. This place has also been one of the favorite places of the first Prime Minister Jawaharlal Nehru.\n\nSahastradhara is one of the main tourist places of Dehradun. The Baldi River and the caves here are famous for the scenic views. A waterfall with medicinal properties also flows here. It is believed that bathing here cures various skin diseases. Here many parents are seen bathing their polio affected children in sulfur water. At present, the center of attraction is the ropeway here. A ropeway has been constructed to go to Manideep situated at an altitude of about three thousand meters from the main Sahastradhara.");
+        }
+        if(value.equals("fromskiingcard")){
+            imageView5.setImageResource(R.drawable.skiing);
+            textView4.setText("Skiing Capital of India-Auli");
+            textView4.setTextSize(24);
+            textView.setText("About");
+            textView2.setText("The small yet picture-perfect town of Auli  is India’s proper ski resort destination.\n\nSurrounded by acres of Oak and coniferous forests, Auli offers a panoramic view of some of India’s highest peaks, including the second  highest in the country, Nanda devi.\n\nIt is also the Gateway to the Nanda devi and valley of flowers national park, including the Hemkund  Sahib Gurudwara, and popular trekking  destinations such as Gorson Bugya, Pangerchulla summit and Tapovan can be accessed through Auli.\n\nAuli has slowly emerged as one of the best hill stations of India and is starting to get recognised as “The skiing  capital of India”.\n\nAuli has the right balance between the scenic beauty of the mighty Himalayas and adventurous snow sports and it offers stunning views of wintery lands and lush landscapes.\n\nAuli is also attached to a small Hanuman temple and it is believed that Lord Hanuman rested here while bringing Sanjeevni booti from Lanka when Lord Laxman was injured in a fight with Ravana.\n\nAuli is located at about 16km from Joshi math  and  as it is closer to Joshi math one can hire a taxi that will drive you to Auli.\n\nThe Auli Man-made Lake is the highest Man-made Lake in the entire world at such a height and this man-made lake was mainly built to create artificial ski slopes which provide an even surface for skiing enthusiasts.\n\nThe Auli Ropeway connects Auli with Joshi math and is one of the most visited places and it functions with the help of a ski lift and chairlift that are seated on ten steel towers.\n\nThe Uttarakhand Tourism department conducts winter skiing competitions in Auli regularly.\n\nThe major attraction of Auli is Fun cable ride which is also known as Gondola and it is recognized as the second highest cable ride of Asia which runs at a length of 4km.\n\nWeirdly there are not many seats present inside, hence you will have to stand and witness the beauty for the entire ride.\n\nBuses quite often run in the morning time till 8:30 from Rishikesh, Haridwar to Joshi Math from where one can either trek or  with the help of Ropeway reach till Auli.");
+        }
+        if(value.equals("fromgqncard")){
+            imageView5.setImageResource(R.drawable.gqn);
+            textView4.setText("Garhwal Queen Nilkanth");
+            textView4.setTextSize(24);
+            textView.setText("About");
+            textView2.setText("Situated in Chamoli district of Uttarakhand at an altitude of 6596 meters over the Alaknanda valley and the town of Badrinath Neelkanth is often referred to as Garhwal Queen.\n\nLegendary Mountaineer Frank Smythe described the Peak as “ Second only to Siniolchu in the Himalayan beauty”\n\nNeelkanth is one of the many titles given to Lord Shiva, one of the most revered Hindu deities.\n\nAccording to Hindu Mythology there used to be no Neelkanth Mountain earlier however due to the sins committed by the priest, Lord Shiva was displeased and erected a sky-high mountain between Badrinath and Kedarnath.\n\nFrom a distance the peak resembles Lord Shiva sitting in meditation and as soon as the first ray of Sunlight strikes the peak, the whole valley shines as bright as a huge white-golden pearl while during sunset it looks like Ruby Red Crystal.\n\nThe amazing  trek to Neelkanth starts from Badrinath with the first checkpoint located at Charan Paduka at distance of 3km where one can see the footprints of Lord Vishnu on the rock and travelling further 6 kms we can reach Neelkanth Base camp where one can capture the views of Mt. Neelkanth.\n\nThe mountaineers and adventure lovers can stay at the base camp and  attempt to climb the summit.");
+        }
+        if(value.equals("fromltcard")){
+            imageView5.setImageResource(R.drawable.lt);
+            textView4.setText("Lal Tibba");
+            textView.setText("About");
+            textView2.setText("Renowned among the tourists for its romantic sunset and sunrise, also known as “Red Hill” ,Lal Tibba once served as the Summer Capital for British India during the colonial era.\n\nLocated at 5.5 km from Library Bus stand at an altitude of 8000m offers a mesmerizing  view of Himalayan Mountain peaks  at Depot hills in Landour.\n\nThe best  season to visit this place would be during summer skies between March and July and it can be reached easily from Dehradun Railway station (34km) and Jolly Grant Airport(57km).\n\nThe primary thing to witness at Lal Tibba would be the undisturbed sight of the Himalayan ranges, peaks such as Badrinath (Neelkanth Peak), Kedarnath Peak and the trio of Banderpoonch peaks which can be viewed from the Telescope erected by Japanese authority standing at 20 feet high on cliff.\n\nThe entry fee per person is Rs 50 and snowy white lines of Ranges can be easily viewed from near Char dukan,  a famous sightseeing place in Landour.\n\nOn the way to Lal Tibba one can spot the house of famous writer- Ruskin Bond.\n\nOne can spend a quiet evening soaking in the chilly breeze all the while staring at amazing panoramas and sipping on your hot coffee.");
+        }
+        if(value.equals("fromgehcard")){
+            imageView5.setImageResource(R.drawable.geh);
+            textView4.setText("George Everest House");
+            textView.setText("About");
+            textView2.setText("Situated at about 6km from Gandhi Chowk in Mussoorie, George Everest Peak is one of the major tourist attractions in Mussoorie which offers a spectacular view of the Snow-clad Himalayas and panoramic views of the doon valley.\n\nTrek to George Everest Peak starts from Sir George Everest House and it takes 30 minutes to reach as the path from George Everest House is completely different step.\n\nGeorge Everest House was the House and Laboratory of  Sir George Everest who was a surveyor general of India during 1830-1843.\n\nThere are no entry fees over here and one can hire cab or Jeep from Dehradun or Mussoorie to reach to this place.\n\nThe views are stunning from George Everest Peak and there are Tibetian flags all around you.\n\nIt is famous for Camping, Hiking, Picnic spots and view points and it offers view of Snow- capped Himalayas on one and twinkling city of Dehradun on the other end.\n\nPeople prefer this place for day outings and picnics and the serenity that it offers.");
         }
         if(value.equals("frombycar")){
             imageView5.setImageResource(R.drawable.bycar);
