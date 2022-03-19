@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 public class data_details extends AppCompatActivity {
     TextView textView, textView2, textView4;
-    ImageView imageView5, back_buto;
+    ImageView imageView5, datadetails_home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,24 +26,15 @@ public class data_details extends AppCompatActivity {
         textView=findViewById(R.id.textView);
         textView2=findViewById(R.id.textView2);
         textView4=findViewById(R.id.textView4);
+        datadetails_home=findViewById(R.id.datadetails_home);
         imageView5=findViewById(R.id.imageView5);
-        back_buto=findViewById(R.id.imageView8);
         Intent intent = getIntent();
         String value = intent.getStringExtra("key");
-        back_buto.setOnClickListener(new View.OnClickListener() {
+        datadetails_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if((value.equals("fromhccard")) || (value.equals("fromgaurikundcard")) || (value.equals("fromntcard")) || (value.equals("fromgaumukhcard")) || (value.equals("fromrnpcard")) || (value.equals("fromfricard")) || (value.equals("fromhkpcard")) || (value.equals("fromtapkeshwarcard")) || (value.equals("frommanasacard")) || (value.equals("fromteramanzilcard")) || (value.equals("fromvyascard")) || (value.equals("fromrobbercard")) || (value.equals("fromsdcard")) || (value.equals("fromskiingcard")) || (value.equals("fromgqncard")) || (value.equals("fromltcard")) || (value.equals("fromgehcard"))){
-                    Intent intent1 = new Intent(data_details.this,HomePage.class);
-                    startActivity(intent1);
-                    finish();
-                }
-                else{
-                    Intent intent2 = new Intent(data_details.this,DataPage.class);
-                    startActivity(intent2);
-                    finish();
-                }
-
+                Intent intent1=new Intent(data_details.this,HomePage.class);
+                startActivity(intent1);
             }
         });
         if(value.equals("fromyam")){

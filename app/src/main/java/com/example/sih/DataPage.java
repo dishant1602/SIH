@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DataPage extends AppCompatActivity {
-    ImageView yam, back_butt, time_yam;
+    ImageView yam, time_yam, datapage_home;
     TextView bycar,byair,bytrain, suryakund, taptkund, jankichatti, divyashila, hanumanchatti, kharsali, shanidevmandir;
 
     @Override
@@ -17,7 +17,7 @@ public class DataPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_page);
         yam=findViewById(R.id.yam);
-        back_butt = findViewById(R.id.imageView7);
+        datapage_home=findViewById(R.id.datapage_home);
         bycar=findViewById(R.id.bycar);
         byair=findViewById(R.id.byair);
         time_yam=findViewById(R.id.time);
@@ -30,12 +30,11 @@ public class DataPage extends AppCompatActivity {
         divyashila=findViewById(R.id.divyashila);
         jankichatti=findViewById(R.id.jankichatti);
 
-        back_butt.setOnClickListener(new View.OnClickListener() {
+        datapage_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent back_int = new Intent(DataPage.this,HomePage.class);
-                startActivity(back_int);
-                finish();
+                Intent intent1 = new Intent(DataPage.this,HomePage.class);
+                startActivity(intent1);
             }
         });
 

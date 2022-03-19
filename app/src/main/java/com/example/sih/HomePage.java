@@ -31,7 +31,6 @@ public class HomePage extends AppCompatActivity implements LocationListener {
     CardView hccard, gaurikundcard, ntcard, gaumukhcard, rnpcard, fricard, hkpcard, tapkeshwarcard, manasacard, teramanzilcard, vyascard, robbercard, sdcard, skiingcard, gqncard, ltcard, gehcard;
     Double Latitude, Longitude;
     Dialog dialog;
-    ImageView back_but;
 //By default section
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +59,6 @@ public class HomePage extends AppCompatActivity implements LocationListener {
         sddist=findViewById(R.id.sddist);
         robberdist=findViewById(R.id.robberdist);
         skiingdist=findViewById(R.id.skiingdist);
-        back_but=findViewById(R.id.imageView2);
         fridist = findViewById(R.id.fridist);
         rnpdist = findViewById(R.id.rnpdist);
         hcdist=findViewById(R.id.hcdist);
@@ -100,11 +98,6 @@ public class HomePage extends AppCompatActivity implements LocationListener {
         yamunotricard.setOnClickListener(view -> {
             Intent i = new Intent(HomePage.this,DataPage.class);
             startActivity(i);
-        });
-        back_but.setOnClickListener(view -> {
-            moveTaskToBack(true);
-            android.os.Process.killProcess(android.os.Process.myPid());
-            System.exit(1);
         });
         hccard.setOnClickListener(view -> {
             Intent hccard_int = new Intent(HomePage.this,data_details.class);
