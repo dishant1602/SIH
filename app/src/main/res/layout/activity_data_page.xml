@@ -269,11 +269,11 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/datapage_weather"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_food_unsel" />
+            app:srcCompat="@drawable/ic_weather_unsel" />
 
         <ImageView
             android:id="@+id/datapage_home"
@@ -283,7 +283,7 @@
             app:srcCompat="@drawable/ic_home_unsel" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/datapage_hotel"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:layout_weight="1"

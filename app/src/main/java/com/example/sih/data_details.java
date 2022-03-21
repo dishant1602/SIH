@@ -11,30 +11,40 @@ import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ClickableSpan;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class data_details extends AppCompatActivity {
     TextView textView, textView2, textView4;
-    ImageView imageView5, datadetails_home;
+    ImageView imageView5, data_details_home, data_details_weather;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_data_details);
         textView=findViewById(R.id.textView);
         textView2=findViewById(R.id.textView2);
         textView4=findViewById(R.id.textView4);
-        datadetails_home=findViewById(R.id.datadetails_home);
+        data_details_home=findViewById(R.id.data_details_home);
+        data_details_weather=findViewById(R.id.data_details_weather);
         imageView5=findViewById(R.id.imageView5);
         Intent intent = getIntent();
         String value = intent.getStringExtra("key");
-        datadetails_home.setOnClickListener(new View.OnClickListener() {
+        data_details_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1=new Intent(data_details.this,HomePage.class);
-                startActivity(intent1);
+                Intent data_details_Home=new Intent(data_details.this,HomePage.class);
+                startActivity(data_details_Home);
+            }
+        });
+        data_details_weather.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent data_details_Weather=new Intent(data_details.this,WeatherPage.class);
+                startActivity(data_details_Weather);
             }
         });
         if(value.equals("fromyam")){

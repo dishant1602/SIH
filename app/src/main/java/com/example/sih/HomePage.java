@@ -5,6 +5,7 @@ import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -31,12 +32,14 @@ public class HomePage extends AppCompatActivity implements LocationListener {
     CardView hccard, gaurikundcard, ntcard, gaumukhcard, rnpcard, fricard, hkpcard, tapkeshwarcard, manasacard, teramanzilcard, vyascard, robbercard, sdcard, skiingcard, gqncard, ltcard, gehcard;
     Double Latitude, Longitude;
     Dialog dialog;
+    ImageView homepage_weather;
 //By default section
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home_page);
+        homepage_weather=findViewById(R.id.homepage_weather);
         hkpcard=findViewById(R.id.hkpcard);
         tapkeshwarcard=findViewById(R.id.tapkeshwarcard);
         gqncard=findViewById(R.id.gqncard);
@@ -95,6 +98,13 @@ public class HomePage extends AppCompatActivity implements LocationListener {
             }
         },1000);
         dialog.show();
+        homepage_weather.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Home_Weather=new Intent(HomePage.this,WeatherPage.class);
+                startActivity(Home_Weather);
+            }
+        });
         yamunotricard.setOnClickListener(view -> {
             Intent i = new Intent(HomePage.this,DataPage.class);
             startActivity(i);
@@ -213,6 +223,7 @@ public class HomePage extends AppCompatActivity implements LocationListener {
         });
     }
 // For current location and to display it
+    @SuppressLint("SetTextI18n")
     @Override
     public void onLocationChanged(@NonNull Location location) {
         Latitude = location.getLatitude();

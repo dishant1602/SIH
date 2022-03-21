@@ -13,11 +13,12 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="322dp"
+            android:layout_height="335dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
-            app:srcCompat="@drawable/uttarakhand" />
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/main_logo" />
 
         <com.airbnb.lottie.LottieAnimationView
             android:layout_width="wrap_content"

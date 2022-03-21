@@ -5,18 +5,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DataPage extends AppCompatActivity {
-    ImageView yam, time_yam, datapage_home;
+    ImageView yam, time_yam, datapage_home, datapage_weather;
     TextView bycar,byair,bytrain, suryakund, taptkund, jankichatti, divyashila, hanumanchatti, kharsali, shanidevmandir;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_data_page);
         yam=findViewById(R.id.yam);
+        datapage_weather=findViewById(R.id.datapage_weather);
         datapage_home=findViewById(R.id.datapage_home);
         bycar=findViewById(R.id.bycar);
         byair=findViewById(R.id.byair);
@@ -33,8 +36,15 @@ public class DataPage extends AppCompatActivity {
         datapage_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1 = new Intent(DataPage.this,HomePage.class);
-                startActivity(intent1);
+                Intent Data_Home = new Intent(DataPage.this,HomePage.class);
+                startActivity(Data_Home);
+            }
+        });
+        datapage_weather.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Data_Weather = new Intent(DataPage.this, WeatherPage.class);
+                startActivity(Data_Weather);
             }
         });
 

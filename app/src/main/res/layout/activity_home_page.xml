@@ -22,7 +22,8 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:scrollbars="none">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -1837,21 +1838,21 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/imageView18"
+            android:id="@+id/homepage_weather"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_food_unsel" />
+            app:srcCompat="@drawable/ic_weather_unsel" />
 
         <ImageView
-            android:id="@+id/imageView19"
+            android:id="@+id/homepage_home"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_home_sel" />
 
         <ImageView
-            android:id="@+id/imageView20"
+            android:id="@+id/homepage_hotel"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:layout_weight="1"

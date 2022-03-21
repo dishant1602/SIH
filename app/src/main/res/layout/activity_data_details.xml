@@ -76,10 +76,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
-                            android:fontFamily="@font/trade_winds"
+                            android:fontFamily="@font/nunito_sans_light"
                             android:text="..."
                             android:textColor="#FF5722"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </ScrollView>
             </LinearLayout>
@@ -100,21 +101,21 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/data_details_weather"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_food_unsel" />
+            app:srcCompat="@drawable/ic_weather_unsel" />
 
         <ImageView
-            android:id="@+id/datadetails_home"
+            android:id="@+id/data_details_home"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_home_unsel" />
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/data_details_hotel"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:layout_weight="1"
