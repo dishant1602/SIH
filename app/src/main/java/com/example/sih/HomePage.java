@@ -1,6 +1,7 @@
 package com.example.sih;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 
@@ -20,6 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import java.text.DecimalFormat;
 
@@ -32,7 +34,9 @@ public class HomePage extends AppCompatActivity implements LocationListener {
     CardView hccard, gaurikundcard, ntcard, gaumukhcard, rnpcard, fricard, hkpcard, tapkeshwarcard, manasacard, teramanzilcard, vyascard, robbercard, sdcard, skiingcard, gqncard, ltcard, gehcard;
     Double Latitude, Longitude;
     Dialog dialog;
-    ImageView homepage_weather;
+    LinearLayout sidemenu_homepage, precpop, tncpop, aboutuspop;
+    ImageView homepage_weather, homepage_menu;
+    Boolean sidecond=false;
 //By default section
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,11 @@ public class HomePage extends AppCompatActivity implements LocationListener {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home_page);
         homepage_weather=findViewById(R.id.homepage_weather);
+        precpop=findViewById(R.id.precpop);
+        tncpop=findViewById(R.id.tncpop);
+        aboutuspop=findViewById(R.id.aboutuspop);
+        homepage_menu=findViewById(R.id.homepage_menu);
+        sidemenu_homepage=findViewById(R.id.sidemenu_homepage);
         hkpcard=findViewById(R.id.hkpcard);
         tapkeshwarcard=findViewById(R.id.tapkeshwarcard);
         gqncard=findViewById(R.id.gqncard);
@@ -98,6 +107,45 @@ public class HomePage extends AppCompatActivity implements LocationListener {
             }
         },1000);
         dialog.show();
+        precpop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent precfromhome = new Intent(HomePage.this, mergedwebview.class);
+                precfromhome.putExtra("spacex","prechi");
+                startActivity(precfromhome);
+            }
+        });
+        tncpop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent tncfromhome = new Intent(HomePage.this, mergedwebview.class);
+                tncfromhome.putExtra("spacex","tnchi");
+                startActivity(tncfromhome);
+            }
+        });
+        aboutuspop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent aboutusfromhome = new Intent(HomePage.this, mergedwebview.class);
+                aboutusfromhome.putExtra("spacex","aboutushi");
+                startActivity(aboutusfromhome);
+            }
+        });
+        homepage_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!sidecond){
+                    homepage_menu.setImageResource(R.drawable.ic_menu_sel);
+                    sidemenu_homepage.setVisibility(View.VISIBLE);
+                    sidecond=true;
+                }
+                else{
+                    homepage_menu.setImageResource(R.drawable.ic_menu_unsel);
+                    sidemenu_homepage.setVisibility(View.GONE);
+                    sidecond=false;
+                }
+            }
+        });
         homepage_weather.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
