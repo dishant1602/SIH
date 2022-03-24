@@ -28,14 +28,18 @@ public class WeatherPage extends AppCompatActivity {
     Button yam_but, gangotri_button, kedarnath_button, badrinath_button, hc_button, gaurikund_button, nt_button, gaumukh_button, rnp_button, fri_button, hkp_button, tapkeshwar_button, manasa_button, teramanzil_button, vyas_button, robber_button, sd_button, skiing_button, gqn_button, lt_button, geh_button, close_weathinfo;
     Double Latitude=null;
     Double Longitude=null;
-    LinearLayout weatherdisp;
-    ImageView weatherpage_home;
+    Boolean sidecond=false;
+    LinearLayout weatherdisp, sidemenu_weatherpage;
+    ImageView weatherpage_home, weatherpage_menu, weatherpage_hotel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_weather_page);
+        sidemenu_weatherpage=findViewById(R.id.sidemenu_weatherpage);
         weatherpage_home=findViewById(R.id.weatherpage_home);
+        weatherpage_hotel=findViewById(R.id.weatherpage_hotel);
+        weatherpage_menu=findViewById(R.id.weatherpage_menu);
         x_curr=findViewById(R.id.x_curr);
         weatherdisp=findViewById(R.id.weatherdisp);
         close_weathinfo=findViewById(R.id.close_weathinfo);
@@ -70,6 +74,28 @@ public class WeatherPage extends AppCompatActivity {
             public void onClick(View view) {
                 Intent Weather_Home = new Intent(WeatherPage.this,HomePage.class);
                 startActivity(Weather_Home);
+            }
+        });
+        weatherpage_hotel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Weather_Hotel = new Intent(WeatherPage.this,HotelPage.class);
+                startActivity(Weather_Hotel);
+            }
+        });
+        weatherpage_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!sidecond){
+                    weatherpage_menu.setImageResource(R.drawable.ic_menu_sel);
+                    sidemenu_weatherpage.setVisibility(View.VISIBLE);
+                    sidecond=true;
+                }
+                else{
+                    weatherpage_menu.setImageResource(R.drawable.ic_menu_unsel);
+                    sidemenu_weatherpage.setVisibility(View.GONE);
+                    sidecond=false;
+                }
             }
         });
         close_weathinfo.setOnClickListener(view -> weatherdisp.setVisibility(View.GONE));

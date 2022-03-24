@@ -13,12 +13,15 @@ import android.text.style.ClickableSpan;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class data_details extends AppCompatActivity {
     TextView textView, textView2, textView4;
-    ImageView imageView5, data_details_home, data_details_weather;
+    ImageView imageView5, data_details_home, data_details_weather, data_details_menu, data_details_hotel;
+    Boolean sidecond=false;
+    LinearLayout sidemenu_data_details;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +31,10 @@ public class data_details extends AppCompatActivity {
         textView=findViewById(R.id.textView);
         textView2=findViewById(R.id.textView2);
         textView4=findViewById(R.id.textView4);
+        sidemenu_data_details=findViewById(R.id.sidemenu_data_details);
         data_details_home=findViewById(R.id.data_details_home);
+        data_details_hotel=findViewById(R.id.data_details_hotel);
+        data_details_menu=findViewById(R.id.data_details_menu);
         data_details_weather=findViewById(R.id.data_details_weather);
         imageView5=findViewById(R.id.imageView5);
         Intent intent = getIntent();
@@ -45,6 +51,28 @@ public class data_details extends AppCompatActivity {
             public void onClick(View view) {
                 Intent data_details_Weather=new Intent(data_details.this,WeatherPage.class);
                 startActivity(data_details_Weather);
+            }
+        });
+        data_details_hotel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent data_details_Hotel=new Intent(data_details.this,HotelPage.class);
+                startActivity(data_details_Hotel);
+            }
+        });
+        data_details_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!sidecond){
+                    data_details_menu.setImageResource(R.drawable.ic_menu_sel);
+                    sidemenu_data_details.setVisibility(View.VISIBLE);
+                    sidecond=true;
+                }
+                else{
+                    data_details_menu.setImageResource(R.drawable.ic_menu_unsel);
+                    sidemenu_data_details.setVisibility(View.GONE);
+                    sidecond=false;
+                }
             }
         });
         if(value.equals("fromyam")){

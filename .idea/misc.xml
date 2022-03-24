@@ -16,16 +16,18 @@
         <entry key="..\:/Users/admin/AndroidStudioProjects/SIH/app/src/main/res/layout/activity_data_details.xml" value="0.35597826086956524" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/SIH/app/src/main/res/layout/activity_data_page.xml" value="0.33" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/SIH/app/src/main/res/layout/activity_home_page.xml" value="0.3726839597670725" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/SIH/app/src/main/res/layout/activity_hotel_page.xml" value="0.28442028985507245" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/SIH/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/SIH/app/src/main/res/layout/activity_mergedwebview.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/SIH/app/src/main/res/layout/activity_weather_page.xml" value="0.33" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/SIH/app/src/main/res/layout/dropdown_item.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/SIH/app/src/main/res/layout/pop_up_box.xml" value="0.33" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/SIH/app/src/main/res/layout/toolbar.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/SIH/app/src/main/res/menu/menu_navigation.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

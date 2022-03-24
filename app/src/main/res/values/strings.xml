@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">SIH</string>
     <string name="chardham">Chardham</string>
+
+    <string-array name="locations">
+        <item>Yamunotri</item>
+        <item>Gangotri</item>
+        <item>Kedarnath</item>
+        <item>Badrinath</item>
+        <item>Mussoorie</item>
+        <item>Rishikesh</item>
+        <item>Dehradun</item>
+        <item>Haridwar</item>
+    </string-array>
 </resources>

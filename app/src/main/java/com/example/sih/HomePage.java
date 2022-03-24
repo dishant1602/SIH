@@ -35,7 +35,7 @@ public class HomePage extends AppCompatActivity implements LocationListener {
     Double Latitude, Longitude;
     Dialog dialog;
     LinearLayout sidemenu_homepage, precpop, tncpop, aboutuspop;
-    ImageView homepage_weather, homepage_menu;
+    ImageView homepage_weather, homepage_menu, homepage_hotel;
     Boolean sidecond=false;
 //By default section
     @Override
@@ -44,6 +44,7 @@ public class HomePage extends AppCompatActivity implements LocationListener {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home_page);
         homepage_weather=findViewById(R.id.homepage_weather);
+        homepage_hotel=findViewById(R.id.homepage_hotel);
         precpop=findViewById(R.id.precpop);
         tncpop=findViewById(R.id.tncpop);
         aboutuspop=findViewById(R.id.aboutuspop);
@@ -150,6 +151,13 @@ public class HomePage extends AppCompatActivity implements LocationListener {
             public void onClick(View view) {
                 Intent Home_Weather=new Intent(HomePage.this,WeatherPage.class);
                 startActivity(Home_Weather);
+            }
+        });
+        homepage_hotel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Home_Hotel=new Intent(HomePage.this,HotelPage.class);
+                startActivity(Home_Hotel);
             }
         });
         yamunotricard.setOnClickListener(view -> {
