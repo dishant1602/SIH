@@ -23,7 +23,16 @@ public class mergedwebview extends AppCompatActivity {
             webView.loadUrl("file:///android_asset/aboutus.html");
         }
         if(value.equals("tchi")){
-            webView.loadUrl("file:///android_asset/tc.html");
+            webView.loadUrl("file:///android_asset/tandc.html");
+        }
+        if(value.equals("tcshi")){
+            webView.loadUrl("file:///android_asset/tandc.html");
+        }
+        if(value.equals("precshi")){
+            webView.loadUrl("file:///android_asset/precaution.html");
+        }
+        if(value.equals("aboutusshi")){
+            webView.loadUrl("file:///android_asset/aboutus.html");
         }
     }
 }

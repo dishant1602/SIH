@@ -7,17 +7,26 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class DataPage extends AppCompatActivity {
     ImageView yam, time_yam, datapage_home, datapage_weather;
     TextView bycar,byair,bytrain, suryakund, taptkund, jankichatti, divyashila, hanumanchatti, kharsali, shanidevmandir;
+    LinearLayout prechop, tnchop, aboutushop, sidemenu_datapage;
+    ImageView datapage_menu;
+    Boolean sidecond=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_data_page);
+        prechop=findViewById(R.id.prechop);
+        sidemenu_datapage=findViewById(R.id.sidemenu_datapage);
+        datapage_menu=findViewById(R.id.datapage_menu);
+        tnchop=findViewById(R.id.tnchop);
+        aboutushop=findViewById(R.id.aboutushop);
         yam=findViewById(R.id.yam);
         datapage_weather=findViewById(R.id.datapage_weather);
         datapage_home=findViewById(R.id.datapage_home);
@@ -155,6 +164,50 @@ public class DataPage extends AppCompatActivity {
                 startActivity(jankichatti_int);
             }
         });
+
+        datapage_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!sidecond){
+                    datapage_menu.setImageResource(R.drawable.ic_menu_sel);
+                    sidemenu_datapage.setVisibility(View.VISIBLE);
+                    sidecond=true;
+                }
+                else{
+                    datapage_menu.setImageResource(R.drawable.ic_menu_unsel);
+                    sidemenu_datapage.setVisibility(View.GONE);
+                    sidecond=false;
+                }
+            }
+        });
+
+        tnchop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent tncfromdatapage = new Intent(DataPage.this, mergedwebview.class);
+                tncfromdatapage.putExtra("spacex","tncshi");
+                startActivity(tncfromdatapage);
+            }
+        });
+
+        aboutushop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent aboutusfromdatapage = new Intent(DataPage.this, mergedwebview.class);
+                aboutusfromdatapage.putExtra("spacex","aboutusshi");
+                startActivity(aboutusfromdatapage);
+            }
+        });
+
+        prechop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent precfromdata = new Intent(DataPage.this, mergedwebview.class);
+                precfromdata.putExtra("spacex","precshi");
+                startActivity(precfromdata);
+            }
+        });
+
 
 
     }

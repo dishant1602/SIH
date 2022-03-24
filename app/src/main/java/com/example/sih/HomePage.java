@@ -106,7 +106,6 @@ public class HomePage extends AppCompatActivity implements LocationListener {
                 handler.postDelayed(this,1000);
             }
         },1000);
-        dialog.show();
         precpop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
