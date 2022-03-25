@@ -340,7 +340,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:scaleType="centerInside"
-                                    app:srcCompat="@drawable/gangotrihone" />
+                                    app:srcCompat="@drawable/yamunotrihone" />
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -422,8 +422,8 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:scaleType="centerInside"
-                                    app:srcCompat="@drawable/gangotrihone" />
+                                    android:scaleType="fitXY"
+                                    app:srcCompat="@drawable/yamunotrihtwo" />
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -505,8 +505,8 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:scaleType="centerInside"
-                                    app:srcCompat="@drawable/gangotrihone" />
+                                    android:scaleType="fitXY"
+                                    app:srcCompat="@drawable/yamunotrihthree" />
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -2199,7 +2199,7 @@
             app:srcCompat="@drawable/main_logo" />
 
         <LinearLayout
-            android:id="@+id/precpop"
+            android:id="@+id/preclop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
@@ -2220,6 +2220,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/faqlop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
@@ -2240,7 +2241,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/tncpop"
+            android:id="@+id/tnclop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
@@ -2261,7 +2262,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/aboutuspop"
+            android:id="@+id/aboutuslop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
@@ -2282,7 +2283,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/disasterpop"
+            android:id="@+id/disasterlop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"

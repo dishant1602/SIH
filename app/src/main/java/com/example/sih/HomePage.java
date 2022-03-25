@@ -20,6 +20,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -34,7 +35,7 @@ public class HomePage extends AppCompatActivity implements LocationListener {
     CardView hccard, gaurikundcard, ntcard, gaumukhcard, rnpcard, fricard, hkpcard, tapkeshwarcard, manasacard, teramanzilcard, vyascard, robbercard, sdcard, skiingcard, gqncard, ltcard, gehcard;
     Double Latitude, Longitude;
     Dialog dialog;
-    LinearLayout sidemenu_homepage, precpop, tncpop, aboutuspop;
+    LinearLayout sidemenu_homepage, precpop, faqpop, tncpop, aboutuspop, disasterpop;
     ImageView homepage_weather, homepage_menu, homepage_hotel;
     Boolean sidecond=false;
 //By default section
@@ -45,8 +46,11 @@ public class HomePage extends AppCompatActivity implements LocationListener {
         setContentView(R.layout.activity_home_page);
         homepage_weather=findViewById(R.id.homepage_weather);
         homepage_hotel=findViewById(R.id.homepage_hotel);
+
+        disasterpop=findViewById(R.id.disasterpop);
         precpop=findViewById(R.id.precpop);
         tncpop=findViewById(R.id.tncpop);
+        faqpop=findViewById(R.id.faqpop);
         aboutuspop=findViewById(R.id.aboutuspop);
         homepage_menu=findViewById(R.id.homepage_menu);
         sidemenu_homepage=findViewById(R.id.sidemenu_homepage);
@@ -95,6 +99,7 @@ public class HomePage extends AppCompatActivity implements LocationListener {
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
         dialog.setCancelable(false);
         dialog.getWindow().getAttributes().windowAnimations=R.style.animation;
+        Button explore_butt = dialog.findViewById(R.id.explore_butt);
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         if(Build.VERSION.SDK_INT>=23){
             requestPermissions(PERMISSIONS, PERMISSIONS_ALL);
@@ -107,6 +112,13 @@ public class HomePage extends AppCompatActivity implements LocationListener {
                 handler.postDelayed(this,1000);
             }
         },1000);
+        dialog.show();
+        explore_butt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
         precpop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -115,12 +127,28 @@ public class HomePage extends AppCompatActivity implements LocationListener {
                 startActivity(precfromhome);
             }
         });
+        disasterpop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent disfromhome = new Intent(HomePage.this, mergedwebview.class);
+                disfromhome.putExtra("spacex","dishi");
+                startActivity(disfromhome);
+            }
+        });
         tncpop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent tncfromhome = new Intent(HomePage.this, mergedwebview.class);
                 tncfromhome.putExtra("spacex","tnchi");
                 startActivity(tncfromhome);
+            }
+        });
+        faqpop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent faqfromhome = new Intent(HomePage.this, mergedwebview.class);
+                faqfromhome.putExtra("spacex","faqhi");
+                startActivity(faqfromhome);
             }
         });
         aboutuspop.setOnClickListener(new View.OnClickListener() {

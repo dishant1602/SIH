@@ -21,13 +21,18 @@ public class data_details extends AppCompatActivity {
     TextView textView, textView2, textView4;
     ImageView imageView5, data_details_home, data_details_weather, data_details_menu, data_details_hotel;
     Boolean sidecond=false;
-    LinearLayout sidemenu_data_details;
+    LinearLayout sidemenu_data_details, prectop, tnctop, faqtop, aboutustop, disastertop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_data_details);
+        prectop=findViewById(R.id.prectop);
+        tnctop=findViewById(R.id.tnctop);
+        faqtop=findViewById(R.id.faqtop);
+        aboutustop=findViewById(R.id.aboutustop);
+        disastertop=findViewById(R.id.disastertop);
         textView=findViewById(R.id.textView);
         textView2=findViewById(R.id.textView2);
         textView4=findViewById(R.id.textView4);
@@ -73,6 +78,46 @@ public class data_details extends AppCompatActivity {
                     sidemenu_data_details.setVisibility(View.GONE);
                     sidecond=false;
                 }
+            }
+        });
+        prectop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent precfromdata_details = new Intent(data_details.this, mergedwebview.class);
+                precfromdata_details.putExtra("spacex","precthi");
+                startActivity(precfromdata_details);
+            }
+        });
+        tnctop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent tncfromdata_details = new Intent(data_details.this, mergedwebview.class);
+                tncfromdata_details.putExtra("spacex","tncthi");
+                startActivity(tncfromdata_details);
+            }
+        });
+        faqtop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent faqfromdata_details = new Intent(data_details.this, mergedwebview.class);
+                faqfromdata_details.putExtra("spacex","faqthi");
+                startActivity(faqfromdata_details);
+            }
+        });
+        aboutustop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent aboutusfromdata_details = new Intent(data_details.this, mergedwebview.class);
+                aboutusfromdata_details.putExtra("spacex","aboutusthi");
+                startActivity(aboutusfromdata_details);
+            }
+        });
+        disastertop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent disfromdata_details = new Intent(data_details.this, mergedwebview.class);
+                disfromdata_details.putExtra("spacex","disthi");
+                startActivity(disfromdata_details);
             }
         });
         if(value.equals("fromyam")){

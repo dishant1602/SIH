@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class DataPage extends AppCompatActivity {
     ImageView yam, time_yam, datapage_home, datapage_weather;
     TextView bycar,byair,bytrain, suryakund, taptkund, jankichatti, divyashila, hanumanchatti, kharsali, shanidevmandir;
-    LinearLayout prechop, tnchop, aboutushop, sidemenu_datapage;
+    LinearLayout prechop, faqhop, tnchop, aboutushop, sidemenu_datapage, disasterhop;
     ImageView datapage_menu;
     Boolean sidecond=false;
 
@@ -23,6 +23,8 @@ public class DataPage extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_data_page);
         prechop=findViewById(R.id.prechop);
+        faqhop=findViewById(R.id.faqhop);
+        disasterhop=findViewById(R.id.disasterhop);
         sidemenu_datapage=findViewById(R.id.sidemenu_datapage);
         datapage_menu=findViewById(R.id.datapage_menu);
         tnchop=findViewById(R.id.tnchop);
@@ -190,6 +192,15 @@ public class DataPage extends AppCompatActivity {
             }
         });
 
+        faqhop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent faqfromdatapage = new Intent(DataPage.this, mergedwebview.class);
+                faqfromdatapage.putExtra("spacex","faqshi");
+                startActivity(faqfromdatapage);
+            }
+        });
+
         aboutushop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -205,6 +216,14 @@ public class DataPage extends AppCompatActivity {
                 Intent precfromdata = new Intent(DataPage.this, mergedwebview.class);
                 precfromdata.putExtra("spacex","precshi");
                 startActivity(precfromdata);
+            }
+        });
+        disasterhop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent disfromdata = new Intent(DataPage.this, mergedwebview.class);
+                disfromdata.putExtra("spacex","disshi");
+                startActivity(disfromdata);
             }
         });
 

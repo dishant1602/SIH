@@ -17,7 +17,7 @@ public class HotelPage extends AppCompatActivity{
     String[] items={"Yamunotri","Gangotri","Badrinath","Kedarnath","Mussoorie","Dehradun","Rishikesh","Haridwar"};
     Boolean sidecond=false;
     AutoCompleteTextView autoCompleteTextView;
-    LinearLayout sidemenu_hotelpage, gangotri_list, yamunotri_list, kedarnath_list, badrinath_list, mussoorie_list, rishikesh_list, dehradun_list, haridwar_list;
+    LinearLayout preclop, tnclop, faqlop, aboutuslop, disasterlop, sidemenu_hotelpage, gangotri_list, yamunotri_list, kedarnath_list, badrinath_list, mussoorie_list, rishikesh_list, dehradun_list, haridwar_list;
     ArrayAdapter<String> adapterItems;
     ImageView hotelpage_home, hotelpage_weather, hotelpage_menu;
 
@@ -25,6 +25,11 @@ public class HotelPage extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hotel_page);
+        preclop=findViewById(R.id.preclop);
+        tnclop=findViewById(R.id.tnclop);
+        aboutuslop=findViewById(R.id.tnclop);
+        faqlop=findViewById(R.id.faqlop);
+        disasterlop=findViewById(R.id.disasterlop);
         gangotri_list=findViewById(R.id.gangotri_list);
         yamunotri_list=findViewById(R.id.yamunotri_list);
         kedarnath_list=findViewById(R.id.kedarnath_list);
@@ -156,6 +161,46 @@ public class HotelPage extends AppCompatActivity{
                     sidemenu_hotelpage.setVisibility(View.GONE);
                     sidecond=false;
                 }
+            }
+        });
+        preclop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent precfromhotel = new Intent(HotelPage.this, mergedwebview.class);
+                precfromhotel.putExtra("spacex","preclhi");
+                startActivity(precfromhotel);
+            }
+        });
+        tnclop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent tncfromhotel = new Intent(HotelPage.this, mergedwebview.class);
+                tncfromhotel.putExtra("spacex","tnclhi");
+                startActivity(tncfromhotel);
+            }
+        });
+        faqlop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent faqfromhotel = new Intent(HotelPage.this, mergedwebview.class);
+                faqfromhotel.putExtra("spacex","faqlhi");
+                startActivity(faqfromhotel);
+            }
+        });
+        aboutuslop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent aboutusfromhotel = new Intent(HotelPage.this, mergedwebview.class);
+                aboutusfromhotel.putExtra("spacex","aboutuslhi");
+                startActivity(aboutusfromhotel);
+            }
+        });
+        disasterlop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent disfromhotel = new Intent(HotelPage.this, mergedwebview.class);
+                disfromhotel.putExtra("spacex","dislhi");
+                startActivity(disfromhotel);
             }
         });
     }

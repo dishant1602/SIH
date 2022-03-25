@@ -29,7 +29,7 @@ public class WeatherPage extends AppCompatActivity {
     Double Latitude=null;
     Double Longitude=null;
     Boolean sidecond=false;
-    LinearLayout weatherdisp, sidemenu_weatherpage;
+    LinearLayout weatherdisp, sidemenu_weatherpage, tncwop, faqwop, aboutuswop, precwop, disasterwop;
     ImageView weatherpage_home, weatherpage_menu, weatherpage_hotel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,11 @@ public class WeatherPage extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_weather_page);
         sidemenu_weatherpage=findViewById(R.id.sidemenu_weatherpage);
+        tncwop=findViewById(R.id.tncwop);
+        aboutuswop=findViewById(R.id.aboutuswop);
+        faqwop=findViewById(R.id.faqwop);
+        precwop=findViewById(R.id.precwop);
+        disasterwop=findViewById(R.id.disasterwop);
         weatherpage_home=findViewById(R.id.weatherpage_home);
         weatherpage_hotel=findViewById(R.id.weatherpage_hotel);
         weatherpage_menu=findViewById(R.id.weatherpage_menu);
@@ -96,6 +101,46 @@ public class WeatherPage extends AppCompatActivity {
                     sidemenu_weatherpage.setVisibility(View.GONE);
                     sidecond=false;
                 }
+            }
+        });
+        precwop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent precfromweather = new Intent(WeatherPage.this, mergedwebview.class);
+                precfromweather.putExtra("spacex","precwhi");
+                startActivity(precfromweather);
+            }
+        });
+        tncwop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent tncfromweather = new Intent(WeatherPage.this, mergedwebview.class);
+                tncfromweather.putExtra("spacex","tncwhi");
+                startActivity(tncfromweather);
+            }
+        });
+        faqwop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent faqfromweather = new Intent(WeatherPage.this, mergedwebview.class);
+                faqfromweather.putExtra("spacex","faqwhi");
+                startActivity(faqfromweather);
+            }
+        });
+        aboutuswop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent aboutusfromweather = new Intent(WeatherPage.this, mergedwebview.class);
+                aboutusfromweather.putExtra("spacex","aboutuswhi");
+                startActivity(aboutusfromweather);
+            }
+        });
+        disasterwop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent disfromweather = new Intent(WeatherPage.this, mergedwebview.class);
+                disfromweather.putExtra("spacex","diswhi");
+                startActivity(disfromweather);
             }
         });
         close_weathinfo.setOnClickListener(view -> weatherdisp.setVisibility(View.GONE));

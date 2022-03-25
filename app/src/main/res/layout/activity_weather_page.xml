@@ -1265,7 +1265,7 @@
             app:srcCompat="@drawable/main_logo" />
 
         <LinearLayout
-            android:id="@+id/precpop"
+            android:id="@+id/precwop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
@@ -1286,6 +1286,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/faqwop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
@@ -1306,7 +1307,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/tncpop"
+            android:id="@+id/tncwop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
@@ -1327,7 +1328,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/aboutuspop"
+            android:id="@+id/aboutuswop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
@@ -1348,7 +1349,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/disasterpop"
+            android:id="@+id/disasterwop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"

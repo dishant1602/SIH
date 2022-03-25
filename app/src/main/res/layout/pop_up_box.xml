@@ -38,5 +38,22 @@
             android:text="So please wait"
             android:textColor="#38803B"
             android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Or you can be an explorer"
+            android:textColor="#FF5722"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/explore_butt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#E91E63"
+            android:text="Let's explore the app" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
