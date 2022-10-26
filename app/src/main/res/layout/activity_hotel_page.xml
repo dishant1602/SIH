@@ -2329,7 +2329,7 @@
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_home_unsel" />
+            app:srcCompat="@drawable/ic_home_unsel_updated" />
 
         <ImageView
             android:id="@+id/hotelpage_hotel"
@@ -2343,7 +2343,7 @@
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_menu_unsel"/>
+            app:srcCompat="@drawable/ic_menu_unsel_updated"/>
 
     </LinearLayout>
 

@@ -97,7 +97,7 @@ public class WeatherPage extends AppCompatActivity {
                     sidecond=true;
                 }
                 else{
-                    weatherpage_menu.setImageResource(R.drawable.ic_menu_unsel);
+                    weatherpage_menu.setImageResource(R.drawable.ic_menu_unsel_updated);
                     sidemenu_weatherpage.setVisibility(View.GONE);
                     sidecond=false;
                 }

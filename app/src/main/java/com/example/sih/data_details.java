@@ -74,7 +74,7 @@ public class data_details extends AppCompatActivity {
                     sidecond=true;
                 }
                 else{
-                    data_details_menu.setImageResource(R.drawable.ic_menu_unsel);
+                    data_details_menu.setImageResource(R.drawable.ic_menu_unsel_updated);
                     sidemenu_data_details.setVisibility(View.GONE);
                     sidecond=false;
                 }

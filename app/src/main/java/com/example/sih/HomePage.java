@@ -21,32 +21,49 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import java.text.DecimalFormat;
 
 public class HomePage extends AppCompatActivity implements LocationListener {
-    LocationManager locationManager;
-    final static String[] PERMISSIONS = {Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION};
-    final static int PERMISSIONS_ALL =1;
-    TextView yamdist, gangdist, kedardist, badridist, hcdist, ntdist, gaurikunddist, gaumukhdist, fridist, rnpdist, hkpdist, teramanzildist, manasadist, tapkeshwardist, vyasdist, sddist, robberdist, skiingdist, gnqdist, gehdist, ltdist;
+    LocationManager locationManager; //Location Manager API accessor
+    final static String[] PERMISSIONS = {Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}; //Permissions
+    final static int PERMISSIONS_ALL =1;//Permissions Granted
+    TextView yamdist, gangdist, kedardist, badridist, hcdist, ntdist, gaurikunddist, gaumukhdist, fridist, rnpdist, hkpdist, teramanzildist, manasadist, tapkeshwardist, vyasdist, sddist, robberdist, skiingdist, gnqdist, gehdist, ltdist;// Distance textView
     CardView yamunotricard;
-    CardView hccard, gaurikundcard, ntcard, gaumukhcard, rnpcard, fricard, hkpcard, tapkeshwarcard, manasacard, teramanzilcard, vyascard, robbercard, sdcard, skiingcard, gqncard, ltcard, gehcard;
+    CardView hccard, gaurikundcard, ntcard, gaumukhcard, rnpcard, fricard, hkpcard, tapkeshwarcard, manasacard, teramanzilcard, vyascard, robbercard, sdcard, skiingcard, gqncard, ltcard, gehcard;// Places.onclick listener
     Double Latitude, Longitude;
     Dialog dialog;
-    LinearLayout sidemenu_homepage, precpop, faqpop, tncpop, aboutuspop, disasterpop;
-    ImageView homepage_weather, homepage_menu, homepage_hotel;
+    LinearLayout sidemenu_homepage, precpop, faqpop, tncpop, aboutuspop, disasterpop; //Menubar elements
+    HorizontalScrollView chardham_scrollview, museum_scrollview, religious_scrollview, cave_scrollview, hot_scrollview, trekking_scrollview; //Categorial Selector Display
+    CardView chardham_button, trekking_button, museum_button, religious_button, cave_button, hot_button; //Categories
+    ImageView homepage_weather, homepage_menu, homepage_hotel;  //Bottom Pane
     Boolean sidecond=false;
+    Button button;
 //By default section
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home_page);
+        //Initialization
+        chardham_scrollview = findViewById(R.id.chardham_scrollview);
+        museum_scrollview = findViewById(R.id.museumsandparks_scrollview);
+        religious_scrollview = findViewById(R.id.religious_scrollview);
+        cave_scrollview = findViewById(R.id.cave_scrollview);
+        hot_scrollview = findViewById(R.id.hot_scrollview);
+        trekking_scrollview = findViewById(R.id.trekking_scrollview);
+        button = findViewById(R.id.button);
         homepage_weather=findViewById(R.id.homepage_weather);
         homepage_hotel=findViewById(R.id.homepage_hotel);
-
+        chardham_button = findViewById(R.id.chardham_button);
+        trekking_button = findViewById(R.id.trekking_button);
+        museum_button = findViewById(R.id.museum_button);
+        religious_button = findViewById(R.id.religious_button);
+        cave_button = findViewById(R.id.cave_button);
+        hot_button = findViewById(R.id.hot_button);
         disasterpop=findViewById(R.id.disasterpop);
         precpop=findViewById(R.id.precpop);
         tncpop=findViewById(R.id.tncpop);
@@ -93,6 +110,7 @@ public class HomePage extends AppCompatActivity implements LocationListener {
         gaurikundcard=findViewById(R.id.gaurikundcard);
         ntcard=findViewById(R.id.ntcard);
         gaumukhcard=findViewById(R.id.gaumukhcard);
+        //Dialog Box Display Code
         dialog = new Dialog(HomePage.this);
         dialog.setContentView(R.layout.pop_up_box);
         dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.back_pop));
@@ -113,12 +131,14 @@ public class HomePage extends AppCompatActivity implements LocationListener {
             }
         },1000);
         dialog.show();
+        //Explore this app button's on click listener
         explore_butt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dialog.dismiss();
             }
         });
+        //Menubar element's on click listener
         precpop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -159,6 +179,7 @@ public class HomePage extends AppCompatActivity implements LocationListener {
                 startActivity(aboutusfromhome);
             }
         });
+        //Bottom Pame element's on click listener
         homepage_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -168,7 +189,7 @@ public class HomePage extends AppCompatActivity implements LocationListener {
                     sidecond=true;
                 }
                 else{
-                    homepage_menu.setImageResource(R.drawable.ic_menu_unsel);
+                    homepage_menu.setImageResource(R.drawable.ic_menu_unsel_updated);
                     sidemenu_homepage.setVisibility(View.GONE);
                     sidecond=false;
                 }
@@ -188,6 +209,67 @@ public class HomePage extends AppCompatActivity implements LocationListener {
                 startActivity(Home_Hotel);
             }
         });
+        //Categories element's on click listener
+        chardham_button.setOnClickListener(view -> {
+            chardham_scrollview.setVisibility(View.VISIBLE);
+            museum_scrollview.setVisibility(View.GONE);
+            religious_scrollview.setVisibility(View.GONE);
+            cave_scrollview.setVisibility(View.GONE);
+            hot_scrollview.setVisibility(View.GONE);
+            trekking_scrollview.setVisibility(View.GONE);
+            button.setText("Chardham");
+        });
+
+        trekking_button.setOnClickListener(view -> {
+            chardham_scrollview.setVisibility(View.GONE);
+            museum_scrollview.setVisibility(View.GONE);
+            religious_scrollview.setVisibility(View.GONE);
+            cave_scrollview.setVisibility(View.GONE);
+            hot_scrollview.setVisibility(View.GONE);
+            trekking_scrollview.setVisibility(View.VISIBLE);
+            button.setText("Trekking Places");
+        });
+
+        museum_button.setOnClickListener(view -> {
+            chardham_scrollview.setVisibility(View.GONE);
+            museum_scrollview.setVisibility(View.VISIBLE);
+            religious_scrollview.setVisibility(View.GONE);
+            cave_scrollview.setVisibility(View.GONE);
+            hot_scrollview.setVisibility(View.GONE);
+            trekking_scrollview.setVisibility(View.GONE);
+            button.setText("Museum and Parks");
+        });
+
+        religious_button.setOnClickListener(view -> {
+            chardham_scrollview.setVisibility(View.GONE);
+            museum_scrollview.setVisibility(View.GONE);
+            religious_scrollview.setVisibility(View.VISIBLE);
+            cave_scrollview.setVisibility(View.GONE);
+            hot_scrollview.setVisibility(View.GONE);
+            trekking_scrollview.setVisibility(View.GONE);
+            button.setText("Religious Places");
+        });
+
+        cave_button.setOnClickListener(view -> {
+            chardham_scrollview.setVisibility(View.GONE);
+            museum_scrollview.setVisibility(View.GONE);
+            religious_scrollview.setVisibility(View.GONE);
+            cave_scrollview.setVisibility(View.VISIBLE);
+            hot_scrollview.setVisibility(View.GONE);
+            trekking_scrollview.setVisibility(View.GONE);
+            button.setText("Adventures and Caves");
+        });
+
+        hot_button.setOnClickListener(view -> {
+            chardham_scrollview.setVisibility(View.GONE);
+            museum_scrollview.setVisibility(View.GONE);
+            religious_scrollview.setVisibility(View.GONE);
+            cave_scrollview.setVisibility(View.GONE);
+            hot_scrollview.setVisibility(View.VISIBLE);
+            trekking_scrollview.setVisibility(View.GONE);
+            button.setText("Hot Picks");
+        });
+        //Only that elements which jump to direct details_page.class
         yamunotricard.setOnClickListener(view -> {
             Intent i = new Intent(HomePage.this,DataPage.class);
             startActivity(i);

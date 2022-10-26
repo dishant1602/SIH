@@ -176,7 +176,7 @@ public class DataPage extends AppCompatActivity {
                     sidecond=true;
                 }
                 else{
-                    datapage_menu.setImageResource(R.drawable.ic_menu_unsel);
+                    datapage_menu.setImageResource(R.drawable.ic_menu_unsel_updated);
                     sidemenu_datapage.setVisibility(View.GONE);
                     sidecond=false;
                 }

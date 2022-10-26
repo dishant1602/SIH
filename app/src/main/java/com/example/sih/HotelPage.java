@@ -157,7 +157,7 @@ public class HotelPage extends AppCompatActivity{
                     sidecond=true;
                 }
                 else{
-                    hotelpage_menu.setImageResource(R.drawable.ic_menu_unsel);
+                    hotelpage_menu.setImageResource(R.drawable.ic_menu_unsel_updated);
                     sidemenu_hotelpage.setVisibility(View.GONE);
                     sidecond=false;
                 }
