@@ -9,9 +9,9 @@ For, `Location` have used `LocationManager` and for `Animation` have used `Lotti
 
 ### Click here to test this app - [Test](https://appetize.io/app/xused4ar527dnmmvceul4tlhkq)
 
-### Click here to download this app - [uttarakhand-tourist-guide.apk](https://drive.google.com/file/d/18hit3gVUp0AI-NNIxoyyUQ9y5oLprEVX/view?usp=sharing)
+### Click here to download this app - [uttarakhand-tourist-guide.apk](https://drive.google.com/file/d/1mtek1ygzopEUake_SFlrOezLDJxuiQP_/view?usp=sharing)
 
 ## Screenshots
 <img src="https://user-images.githubusercontent.com/76876581/198023143-c044a089-2ce3-4461-8d4e-1a3ba202977a.jpg" width="270" height="585"> <img src="https://user-images.githubusercontent.com/76876581/198023345-61390abc-6de3-44af-9a23-0bc9af499e07.jpg" width="270" height="585">
 
-<img src="https://user-images.githubusercontent.com/76876581/198023545-34e671c0-219d-4e1f-bdcb-eaae0107b3c5.jpg" width="270" height="585"> <img src="https://user-images.githubusercontent.com/76876581/198023741-e2d1afde-a159-4fde-a8f3-d0c9e62fffda.jpg" width="270" height="585">
+<img src="https://user-images.githubusercontent.com/76876581/198362949-c1b4857b-3e19-4f9c-807c-34a08780d420.jpg" width="270" height="585">
