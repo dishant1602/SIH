@@ -1,15 +1,74 @@
+
+## 🚀 About Me
+I'm an Android Developer by Passion...  .Net Developer by Profession
 # Uttarakhand Tourist Guide
-This app development is a part of Smart India Hackathon 2022 task. 
 
-<img src="https://user-images.githubusercontent.com/76876581/198018252-12f0c345-f89b-4db9-9eed-ca319c811dd6.png" width="100" height="50">
+A complete guide for the tourist planning to visit Uttarakhand. Built as a compettition participation in the 'Smart India Hackathon 2022'
 
-A mobile application that gives distance from current location via use of LocationManager and also gives weather status via use of OpenWeather API of every pilgrimages in Uttarakhand. Also used WebViewer and LottieFiles for news updates and some animations.
 
-For, `Location` have used `LocationManager` and for `Animation` have used `LottieFiles` also used `openWeather API` and also `WebView`.
+![Logo](https://user-images.githubusercontent.com/76876581/198018252-12f0c345-f89b-4db9-9eed-ca319c811dd6.png)
 
-### Click here to test this app - [Test](https://appetize.io/app/xused4ar527dnmmvceul4tlhkq)
+
+## Features
+
+- Distance of places from User's current location 
+- Realtime Weather Information
+- Live News and Happenings in Uttarakhand
+- Realtime Hotels and Guest Houses Availability Updates
+- Complete information of How to visit | Why to visit | Where to visit | When to visit
+
+
+## Roadmap
+
+- Additional browser support
+
+- Add more integrations
+
+
+## API Reference
+
+#### Weather Info from OpenWeather API
+
+```http
+  GET https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `Latitude` `Longitude` | `double` | **Required**. Your API key |
+
+#### Current Location from Google's LocationManager API
+
+`(LocationManager) getSystemService(LOCATION_SERVICE)`
+
+## FAQ
+
+#### Is the Weather Realtime?
+
+Yes. The weather is realtime as provided by OpenWeatherAPI.
+
+#### What all external resources are used in this app?
+
+`LottieFiles` for Animation. `OpenWeatherAPI` for WeatherInfo. `Location Manager` for live location and distance calculation. `Custom API` for Hotels Availability hosted on ```https://www.pythonanywhere.com```.
+
+#### What if the GPS is turned off?
+
+Exploring the app will still be possible, only the distance from current location won't be available.
+
+
+## Demo
+
+Here's is a link to demo
+
+[Test the App](https://appetize.io/app/xused4ar527dnmmvceul4tlhkq)
+
 
 ## Screenshots
-<img src="https://user-images.githubusercontent.com/76876581/198023143-c044a089-2ce3-4461-8d4e-1a3ba202977a.jpg" width="270" height="585"> <img src="https://user-images.githubusercontent.com/76876581/198023345-61390abc-6de3-44af-9a23-0bc9af499e07.jpg" width="270" height="585">
 
-<img src="https://user-images.githubusercontent.com/76876581/198362949-c1b4857b-3e19-4f9c-807c-34a08780d420.jpg" width="270" height="585">
+![App Screenshot 1](https://user-images.githubusercontent.com/76876581/198023143-c044a089-2ce3-4461-8d4e-1a3ba202977a.jpg)
+
+![App Screenshot 2](https://user-images.githubusercontent.com/76876581/198023345-61390abc-6de3-44af-9a23-0bc9af499e07.jpg)
+
+
+![App Screenshot 3](https://user-images.githubusercontent.com/76876581/198362949-c1b4857b-3e19-4f9c-807c-34a08780d420.jpg)
+
